@@ -1,0 +1,703 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Crabtree Effect Model Sketch</title>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']]
+      },
+      chtml: {
+        scale: 0.9,
+        matchFontHeight: false
+      }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --background: #f6f7f9;
+      --foreground: #17202a;
+      --muted-foreground: #5c6673;
+      --card: #ffffff;
+      --border: #c9d2dc;
+      --series-1: #2f6f9f;
+      --series-2: #a65f4a;
+      --series-3: #5b8e56;
+      --secondary: #e8edf3;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --background: #14181d;
+        --foreground: #edf2f6;
+        --muted-foreground: #a8b3bf;
+        --card: #1c2229;
+        --border: #3a4653;
+        --series-1: #7db7dd;
+        --series-2: #df997c;
+        --series-3: #95ca86;
+        --secondary: #29323c;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--foreground);
+      background: var(--background);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.45;
+    }
+
+    main {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 32px 0;
+      display: grid;
+      gap: 22px;
+    }
+
+    header {
+      display: grid;
+      gap: 8px;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin: 0;
+    }
+
+    h1 {
+      font-size: clamp(1.7rem, 2.7vw, 2.55rem);
+      font-weight: 500;
+      letter-spacing: 0;
+    }
+
+    h2 {
+      font-size: 1.02rem;
+      font-weight: 500;
+    }
+
+    h3 {
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+
+    p,
+    li {
+      color: var(--muted-foreground);
+      font-size: 0.98rem;
+    }
+
+    .lede {
+      max-width: 880px;
+      color: var(--foreground);
+      font-size: 1.05rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .panel {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--card);
+      padding: 18px;
+      min-width: 0;
+    }
+
+    .diagram-panel {
+      display: grid;
+      gap: 12px;
+    }
+
+    svg {
+      width: 100%;
+      height: auto;
+      display: block;
+      overflow: visible;
+    }
+
+    .node rect {
+      fill: var(--background);
+      stroke: var(--border);
+      stroke-width: 1.4;
+      rx: 7;
+    }
+
+    .node text {
+      fill: var(--foreground);
+      font-size: 15px;
+      font-weight: 500;
+      text-anchor: middle;
+      dominant-baseline: middle;
+    }
+
+    .node .sub {
+      fill: var(--muted-foreground);
+      font-size: 12px;
+      font-weight: 400;
+    }
+
+    .flow {
+      fill: none;
+      stroke: var(--border);
+      stroke-width: 2.4;
+      marker-end: url(#arrow-crabtree);
+    }
+
+    .flow-ferment {
+      stroke: var(--series-2);
+      stroke-width: 3.2;
+    }
+
+    .flow-respire {
+      stroke: var(--series-1);
+      stroke-width: 3.2;
+    }
+
+    .flow-ethanol {
+      stroke: var(--series-2);
+      stroke-width: 2.8;
+      stroke-dasharray: 7 5;
+    }
+
+    .flow-growth {
+      stroke: var(--series-3);
+      stroke-width: 3;
+    }
+
+    .tag {
+      fill: var(--secondary);
+      stroke: var(--border);
+      stroke-width: 1;
+      rx: 6;
+    }
+
+    .tag-text {
+      fill: var(--foreground);
+      font-size: 12px;
+      font-weight: 500;
+      text-anchor: middle;
+      dominant-baseline: middle;
+    }
+
+    .equations {
+      display: grid;
+      gap: 12px;
+    }
+
+    .eq {
+      border-left: 3px solid var(--border);
+      padding: 8px 10px;
+      background: var(--background);
+      border-radius: 0 6px 6px 0;
+      overflow-wrap: anywhere;
+    }
+
+    .math-block {
+      color: var(--foreground);
+      display: grid;
+      gap: 4px;
+      margin-top: 4px;
+      overflow-x: auto;
+      font-size: 0.9rem;
+    }
+
+    .equation-line {
+      color: var(--foreground);
+      font-size: 0.9rem;
+      line-height: 1.65;
+      margin: 0;
+      white-space: nowrap;
+    }
+
+    .math-block mjx-container {
+      margin: 0 !important;
+      overflow-x: visible;
+      overflow-y: hidden;
+    }
+
+    .note {
+      margin-top: 6px;
+      font-size: 0.9rem;
+    }
+
+    .bands {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .band {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px;
+      background: var(--card);
+      min-width: 0;
+      display: grid;
+      gap: 6px;
+    }
+
+    .band strong {
+      font-weight: 500;
+      color: var(--foreground);
+    }
+
+    ul {
+      margin: 8px 0 0;
+      padding-left: 18px;
+    }
+
+    .rationale {
+      display: grid;
+      gap: 12px;
+    }
+
+    .rationale-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .reason {
+      border-left: 3px solid var(--border);
+      padding: 8px 10px;
+      background: var(--background);
+      border-radius: 0 6px 6px 0;
+      min-width: 0;
+    }
+
+    .reason strong {
+      display: block;
+      color: var(--foreground);
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+
+    .table-wrap {
+      margin-top: 12px;
+      overflow-x: auto;
+    }
+
+    .symbol-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+    }
+
+    .symbol-table th,
+    .symbol-table td {
+      border-bottom: 1px solid var(--border);
+      padding: 8px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .symbol-table th {
+      color: var(--foreground);
+      font-weight: 500;
+      background: var(--background);
+    }
+
+    .symbol-table td {
+      color: var(--muted-foreground);
+    }
+
+    .symbol-table td:first-child {
+      color: var(--foreground);
+      white-space: nowrap;
+      width: 22%;
+    }
+
+    .symbol-table mjx-container {
+      font-size: 95% !important;
+    }
+
+    .footer {
+      border-top: 1px solid var(--border);
+      padding-top: 14px;
+      font-size: 0.9rem;
+      color: var(--muted-foreground);
+    }
+
+    @media (max-width: 780px) {
+      main {
+        width: min(100% - 24px, 1120px);
+        padding: 20px 0;
+      }
+
+      .grid,
+      .bands,
+      .rationale-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .math-block {
+        font-size: 0.82rem;
+      }
+
+      .equation-line {
+        font-size: 0.82rem;
+      }
+
+      .symbol-table {
+        font-size: 0.84rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main aria-labelledby="crabtree-title">
+    <header>
+      <h1 id="crabtree-title">Crabtree Effect Model Sketch</h1>
+      <p class="lede">
+        A compact model couples mDEB reserve dynamics to an Ohm's-law pathway splitter:
+        glucose drives the Crabtree overflow, ethanol is produced by fermentation, and ethanol
+        can later become a second respiratory substrate when glucose repression relaxes.
+      </p>
+    </header>
+
+    <div class="grid">
+      <section class="panel diagram-panel" aria-labelledby="diagram-title">
+        <h2 id="diagram-title">State And Flux Diagram</h2>
+        <svg viewBox="0 0 900 520" role="img" aria-label="Glucose enters carbon reserve, reserve mobilization splits between fermentation and respiration, ethanol is produced by fermentation and later consumed as a respiratory substrate, and ATP supports living structural biomass growth.">
+          <defs>
+            <marker id="arrow-crabtree" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--border)"></path>
+            </marker>
+          </defs>
+
+          <g class="node" transform="translate(42 210)">
+            <rect width="160" height="76"></rect>
+            <text x="80" y="30">Glucose</text>
+            <text class="sub" x="80" y="52">primary substrate G</text>
+          </g>
+
+          <g class="node" transform="translate(260 205)">
+            <rect width="175" height="86"></rect>
+            <text x="87.5" y="31">C reserve</text>
+            <text class="sub" x="87.5" y="55">x<tspan baseline-shift="sub">C</tspan>, glucose supply</text>
+          </g>
+
+          <g class="node" transform="translate(535 82)">
+            <rect width="180" height="82"></rect>
+            <text x="90" y="30">Fermentation</text>
+            <text class="sub" x="90" y="54">short path, low yield</text>
+          </g>
+
+          <g class="node" transform="translate(535 320)">
+            <rect width="180" height="82"></rect>
+            <text x="90" y="30">Respiration</text>
+            <text class="sub" x="90" y="54">TCA + ETC + O<tspan baseline-shift="sub">2</tspan></text>
+          </g>
+
+          <g class="node" transform="translate(735 82)">
+            <rect width="128" height="82"></rect>
+            <text x="64" y="30">Ethanol</text>
+            <text class="sub" x="64" y="54">product + substrate</text>
+          </g>
+
+          <g class="node" transform="translate(735 245)">
+            <rect width="128" height="82"></rect>
+            <text x="64" y="30">ATP</text>
+            <text class="sub" x="64" y="54">energy supply</text>
+          </g>
+
+          <g class="node" transform="translate(514 438)">
+            <rect width="220" height="68"></rect>
+            <text x="110" y="26">Living structural biomass</text>
+            <text class="sub" x="110" y="48">dV/dt = mu V</text>
+          </g>
+
+          <g class="node" transform="translate(288 40)">
+            <rect width="140" height="58"></rect>
+            <text x="70" y="22">Oxygen</text>
+            <text class="sub" x="70" y="42">f<tspan baseline-shift="sub">O2</tspan></text>
+          </g>
+
+          <path class="flow" d="M 202 248 C 222 248, 238 248, 260 248"></path>
+          <path class="flow flow-ferment" d="M 435 232 C 500 190, 485 132, 535 123"></path>
+          <path class="flow flow-respire" d="M 435 266 C 500 302, 485 350, 535 361"></path>
+          <path class="flow flow-respire" d="M 358 98 C 442 160, 470 312, 535 343"></path>
+          <path class="flow flow-ferment" d="M 715 123 C 725 123, 729 123, 735 123"></path>
+          <path class="flow flow-ethanol" d="M 799 164 C 884 224, 886 397, 715 378"></path>
+          <path class="flow flow-ferment" d="M 625 164 C 665 206, 695 250, 735 275"></path>
+          <path class="flow flow-respire" d="M 715 361 C 735 345, 744 333, 759 327"></path>
+          <path class="flow flow-growth" d="M 760 327 C 760 386, 700 424, 653 438"></path>
+
+          <rect class="tag" x="432" y="142" width="88" height="30"></rect>
+          <text class="tag-text" x="476" y="157">theta<tspan baseline-shift="sub">F</tspan> j<tspan baseline-shift="sub">E,C</tspan></text>
+          <rect class="tag" x="435" y="328" width="105" height="30"></rect>
+          <text class="tag-text" x="487.5" y="343">(1-theta<tspan baseline-shift="sub">F</tspan>) j<tspan baseline-shift="sub">E,C</tspan></text>
+          <rect class="tag" x="216" y="215" width="74" height="30"></rect>
+          <text class="tag-text" x="253" y="230">j<tspan baseline-shift="sub">A,G</tspan>(G)</text>
+          <rect class="tag" x="762" y="178" width="108" height="30"></rect>
+          <text class="tag-text" x="816" y="193">j<tspan baseline-shift="sub">A,EtOH</tspan></text>
+        </svg>
+      </section>
+
+      <section class="panel equations" aria-labelledby="equations-title">
+        <h2 id="equations-title">Minimal Equations</h2>
+        <div class="eq">
+          <h3>mDEB reserve backbone</h3>
+          <div class="math-block">
+            <p class="equation-line">\( \frac{dx_C}{dt}=j_{A,G}(G)-j_{E,C}-\mu x_C \)</p>
+            <p class="equation-line">\( j_{E,C}=\frac{v_{E,C}x_C}{K_{E,C}+x_C} \)</p>
+            <p class="equation-line">\( \frac{dV}{dt}=\mu V \)</p>
+          </div>
+        </div>
+        <div class="eq">
+          <h3>External glucose, ethanol, and oxygen</h3>
+          <div class="math-block">
+            <p class="equation-line">\( j_{A,G}(G)=j_{G,\max}\frac{G}{K_G+G} \)</p>
+            <p class="equation-line">\( I_G(G)=\frac{1}{1+(G/K_{G,E})^n} \)</p>
+            <p class="equation-line">\( j_{A,\mathrm{EtOH}}=j_{\mathrm{EtOH},\max}\frac{\mathrm{EtOH}}{K_{\mathrm{EtOH}}+\mathrm{EtOH}}\frac{O_2}{K_{O,\mathrm{EtOH}}+O_2}I_G(G) \)</p>
+            <p class="equation-line">\( \frac{dG}{dt}=D(G_{in}-G)-\frac{j_{A,G}(G)V}{Y_{X,G}} \)</p>
+            <p class="equation-line">\( \frac{d\mathrm{EtOH}}{dt}=D(\mathrm{EtOH}_{in}-\mathrm{EtOH})+y_{\mathrm{EtOH}}j_FV-\frac{j_{A,\mathrm{EtOH}}V}{Y_{X,\mathrm{EtOH}}}-\lambda_{\mathrm{EtOH}}\mathrm{EtOH} \)</p>
+            <p class="equation-line">\( f_{O_2}(O_2)=k_O\frac{O_2}{K_O+O_2} \)</p>
+            <p class="equation-line">\( \frac{dO_2}{dt}=D(O_{2,in}-O_2)+k_La(O_{2,sat}-O_2)-q_{O_2}(j_R^G+j_R^{\mathrm{EtOH}})V \)</p>
+          </div>
+          <p class="note">For a batch culture set \(D=0\). The default uses glucose repression rather than symmetric competition: ethanol is produced while glucose is abundant, then consumed when glucose falls and oxygen is available.</p>
+        </div>
+        <div class="eq">
+          <h3>Ohm's-law pathway returns</h3>
+          <div class="math-block">
+            <p class="equation-line">\( f_G \equiv j_{E,C} \)</p>
+            <p class="equation-line">\( \Pi_F=\frac{Y_{ATP,F}}{1/f_G+r_F} \)</p>
+            <p class="equation-line">\( \Pi_R=\frac{Y_{ATP,R}}{1/f_G+r_{TCA}+r_{ETC}+1/f_{O_2}} \)</p>
+          </div>
+        </div>
+        <div class="eq">
+          <h3>Dynamic splitter</h3>
+          <div class="math-block">
+            <p class="equation-line">\( U_F=\beta\Pi_F+\beta_a\ln\!\left(\frac{a_G}{a_C}\right),\qquad U_R=\beta\Pi_R \)</p>
+            <p class="equation-line">\( \theta_F^\ast=\frac{\exp(U_F)}{\exp(U_F)+\exp(U_R)} \)</p>
+            <p class="equation-line">\( \theta_R^\ast=\frac{\exp(U_R)}{\exp(U_F)+\exp(U_R)} \)</p>
+            <p class="equation-line">\( \frac{d\theta_F}{dt}=\frac{\theta_F^\ast-\theta_F}{\tau_{reg}} \)</p>
+            <p class="equation-line">\( j_F=\theta_Fj_{E,C},\qquad j_R^G=\theta_Rj_{E,C},\qquad \theta_R=1-\theta_F \)</p>
+            <p class="equation-line">\( j_R^{\mathrm{EtOH}}=j_{A,\mathrm{EtOH}},\qquad j_R=j_R^G+j_R^{\mathrm{EtOH}} \)</p>
+          </div>
+        </div>
+        <div class="eq">
+          <h3>Growth and products</h3>
+          <div class="math-block">
+            <p class="equation-line">\( J_{ATP}=Y_{ATP,F}j_F+Y_{ATP,R}^Gj_R^G+Y_{ATP,\mathrm{EtOH}}j_R^{\mathrm{EtOH}} \)</p>
+            <p class="equation-line">\( \mu=Y_{V,F}j_F+Y_{V,R}^Gj_R^G+Y_{V,\mathrm{EtOH}}j_R^{\mathrm{EtOH}}-m_V \)</p>
+          </div>
+          <p class="note">When catabolic supply is below \(m_V\), \(\mu<0\), representing mortality or living structural biomass loss from maintenance deficit.</p>
+        </div>
+      </section>
+    </div>
+
+    <section class="panel rationale" aria-labelledby="splitter-rationale-title">
+      <h2 id="splitter-rationale-title">Rationale For The Dynamic Splitter</h2>
+      <div class="math-block">
+        <p class="equation-line">\( U_F=\beta\Pi_F+\beta_a\ln\!\left(\frac{a_G}{a_C}\right),\qquad U_R=\beta\Pi_R \)</p>
+        <p class="equation-line">\( \theta_i^\ast=\frac{\exp(U_i)}{\exp(U_F)+\exp(U_R)},\qquad i\in\{F,R\} \)</p>
+        <p class="equation-line">\( \frac{d\theta_F}{dt}=\frac{\theta_F^\ast-\theta_F}{\tau_{reg}} \)</p>
+      </div>
+      <div class="rationale-grid">
+        <article class="reason">
+          <strong>Bounded flux allocation</strong>
+          <p>The softmax keeps each target allocation between 0 and 1 and enforces \(\theta_F^\ast+\theta_R^\ast=1\).</p>
+        </article>
+        <article class="reason">
+          <strong>Pathway economics</strong>
+          <p>\(U_F\) and \(U_R\) score fermentation and respiration using ATP return per effective pathway resistance; the larger score gets more carbon flux.</p>
+        </article>
+        <article class="reason">
+          <strong>Glucose activity signal</strong>
+          <p>\(\ln(a_G/a_C)\) is a dimensionless chemical-potential-like signal. For ideal dilute glucose, \(a_G/a_C \approx G/K_{Crabtree}\).</p>
+        </article>
+        <article class="reason">
+          <strong>Ethanol as second substrate</strong>
+          <p>\(j_{A,\mathrm{EtOH}}\) is oxygen dependent and multiplied by \(I_G(G)\), so ethanol uptake is repressed while glucose is abundant and rises after glucose depletion.</p>
+        </article>
+        <article class="reason">
+          <strong>Finite regulation</strong>
+          <p>\(\tau_{reg}\) represents delayed enzyme, proteome, redox, and mitochondrial adjustment; as \(\tau_{reg}\to 0\), the splitter becomes instantaneous.</p>
+        </article>
+        <article class="reason">
+          <strong>Link to attention</strong>
+          <p><a href="https://arxiv.org/abs/1706.03762">Scaled dot-product attention</a> uses \(\alpha_i=\exp(q\cdot k_i/\sqrt{d})/\sum_j\exp(q\cdot k_j/\sqrt{d})\). Here, pathway scores \(U_i\) play the role of attention scores, and the softmax returns carbon-allocation weights.</p>
+        </article>
+        <article class="reason">
+          <strong>Carbon conservation</strong>
+          <p>The glucose-derived branch fluxes satisfy \(j_F+j_R^G=j_{E,C}\). Ethanol respiration adds a separate substrate flux \(j_R^{\mathrm{EtOH}}\).</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="bands" aria-label="Model regimes">
+      <article class="band">
+        <strong>Low glucose, high O2</strong>
+        <p>Glucose-derived respiration dominates if glucose remains low. Ethanol can also be consumed as a respiratory substrate.</p>
+      </article>
+      <article class="band">
+        <strong>High glucose, O2 present</strong>
+        <p>Fermentation increases because the short pathway can deliver ATP faster per limiting pathway capacity.</p>
+      </article>
+      <article class="band">
+        <strong>Glucose depletion</strong>
+        <p>The splitter relaxes back toward respiration, glucose repression weakens, and ethanol uptake can drive a diauxic respiratory phase if oxygen remains.</p>
+      </article>
+    </section>
+
+    <section class="panel" aria-labelledby="dynamic-title">
+      <h2 id="dynamic-title">Why Make The Splitter Dynamic?</h2>
+      <ul>
+        <li>The algebraic splitter gives the Crabtree threshold.</li>
+        <li>The dynamic splitter adds finite regulatory time for proteome rewiring, mitochondrial capacity, redox handling, and enzyme expression.</li>
+        <li>Use the dynamic form for glucose pulses, diauxic shifts, hysteresis, and single-cell or microfluidic trajectories.</li>
+      </ul>
+    </section>
+
+    <section class="panel" aria-labelledby="symbols-title">
+      <h2 id="symbols-title">Symbol Key</h2>
+      <div class="table-wrap">
+        <table class="symbol-table">
+          <thead>
+            <tr>
+              <th scope="col">Symbol</th>
+              <th scope="col">Meaning</th>
+              <th scope="col">Model role</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>\(G, G_{in}\)</td>
+              <td>External glucose and its inflow concentration.</td>
+              <td>Primary carbon substrate; drives reserve formation and the Crabtree glucose signal.</td>
+            </tr>
+            <tr>
+              <td>\(\mathrm{EtOH}, \mathrm{EtOH}_{in}\)</td>
+              <td>External ethanol and its inflow concentration.</td>
+              <td>Fermentation product that can become a secondary respiratory substrate after glucose depletion.</td>
+            </tr>
+            <tr>
+              <td>\(O_2, O_{2,in}, O_{2,sat}\)</td>
+              <td>Dissolved oxygen, inflow oxygen, and air-equilibrium oxygen.</td>
+              <td>Constrains the respiratory branch through oxygen delivery.</td>
+            </tr>
+            <tr>
+              <td>\(D, k_La\)</td>
+              <td>Dilution rate and gas-transfer coefficient.</td>
+              <td>Set chemostat exchange and oxygen reaeration; use \(D=0\) for batch culture.</td>
+            </tr>
+            <tr>
+              <td>\(j_{A,G}, j_{G,\max}, K_G\)</td>
+              <td>Glucose assimilation rate, maximum glucose uptake capacity, and glucose half-saturation.</td>
+              <td>Moves external glucose into internal carbon reserve.</td>
+            </tr>
+            <tr>
+              <td>\(j_{A,\mathrm{EtOH}}, j_{\mathrm{EtOH},\max}, K_{\mathrm{EtOH}}\)</td>
+              <td>Ethanol uptake rate, maximum ethanol uptake capacity, and ethanol half-saturation.</td>
+              <td>Adds ethanol as a second substrate feeding respiration.</td>
+            </tr>
+            <tr>
+              <td>\(I_G, K_{G,E}, n\)</td>
+              <td>Glucose repression factor, repression scale, and Hill sharpness.</td>
+              <td>Suppress ethanol uptake while glucose remains high.</td>
+            </tr>
+            <tr>
+              <td>\(x_C, j_{E,C}\)</td>
+              <td>Carbon reserve density and mobilized reserve flux.</td>
+              <td>Internal memory of glucose history and immediate catabolic supply.</td>
+            </tr>
+            <tr>
+              <td>\(v_{E,C}, K_{E,C}\)</td>
+              <td>Maximum reserve-turnover rate and reserve-turnover half-saturation.</td>
+              <td>Control how quickly stored carbon becomes usable flux.</td>
+            </tr>
+            <tr>
+              <td>\(V, \mu, m_V\)</td>
+              <td>Living structural biomass, specific growth rate, and maintenance demand.</td>
+              <td>Convert pathway fluxes into net biomass growth; negative \(\mu\) represents mortality or living structural loss.</td>
+            </tr>
+            <tr>
+              <td>\(f_G, f_{O_2}, k_O, K_O, K_{O,\mathrm{EtOH}}\)</td>
+              <td>Glucose-derived catabolic supply, oxygen supply, oxygen-transfer coefficient, and oxygen half-saturations.</td>
+              <td>Define glucose and oxygen conductances in the pathway comparison and oxygen limitation of ethanol uptake.</td>
+            </tr>
+            <tr>
+              <td>\(\Pi_F, \Pi_R\)</td>
+              <td>ATP-generation return for fermentation and respiration.</td>
+              <td>The splitter favors the branch with the larger return per pathway resistance.</td>
+            </tr>
+            <tr>
+              <td>\(Y_{ATP,F}, Y_{ATP,R}\)</td>
+              <td>ATP yield of glucose fermentation and glucose-derived respiration.</td>
+              <td>Respiration has higher yield, while fermentation can have lower pathway resistance.</td>
+            </tr>
+            <tr>
+              <td>\(Y_{ATP,\mathrm{EtOH}}\)</td>
+              <td>ATP yield of ethanol respiration.</td>
+              <td>Connects ethanol uptake to respiratory ATP supply.</td>
+            </tr>
+            <tr>
+              <td>\(r_F, r_{TCA}, r_{ETC}\)</td>
+              <td>Fermentation, citric-acid-cycle, and electron-transport-chain resistances.</td>
+              <td>Represent finite enzyme or pathway capacity.</td>
+            </tr>
+            <tr>
+              <td>\(\theta_F, \theta_R, \theta_F^\ast, \theta_R^\ast, \tau_{reg}\)</td>
+              <td>Actual and target fermentation and respiration fractions, plus regulatory timescale.</td>
+              <td>Let flux allocation lag behind changing glucose and oxygen conditions.</td>
+            </tr>
+            <tr>
+              <td>\(a_G, a_C, K_{Crabtree}\)</td>
+              <td>Glucose activity, reference Crabtree activity, and its concentration approximation.</td>
+              <td>Make the glucose bias dimensionless; for ideal dilute glucose, \(a_G/a_C \approx G/K_{Crabtree}\).</td>
+            </tr>
+            <tr>
+              <td>\(U_F, U_R, \beta, \beta_a\)</td>
+              <td>Fermentation and respiration softmax scores, pathway-return sensitivity, and activity-signal sensitivity.</td>
+              <td>Translate pathway returns and high-glucose activity into the target splitter.</td>
+            </tr>
+            <tr>
+              <td>\(j_F, j_R^G, j_R^{\mathrm{EtOH}}, j_R, q_{O_2}\)</td>
+              <td>Fermentation flux, glucose-derived respiration, ethanol-derived respiration, total respiration, and oxygen demand per respiratory carbon flux.</td>
+              <td>Partition glucose-derived reserve and add ethanol respiration to total oxygen demand.</td>
+            </tr>
+            <tr>
+              <td>\(J_{ATP}, Y_{V,F}, Y_{V,R}^G, Y_{V,\mathrm{EtOH}}\)</td>
+              <td>Total ATP supply and biomass yields for fermentation, glucose respiration, and ethanol respiration.</td>
+              <td>Connect catabolic pathway use to growth potential.</td>
+            </tr>
+            <tr>
+              <td>\(y_{\mathrm{EtOH}}, \lambda_{\mathrm{EtOH}}\)</td>
+              <td>Ethanol yield from fermentation and ethanol loss rate.</td>
+              <td>Track ethanol as both the measurable Crabtree product and a later substrate.</td>
+            </tr>
+            <tr>
+              <td>\(Y_{X,G}, Y_{X,\mathrm{EtOH}}\)</td>
+              <td>Conversion yields from external glucose and ethanol to model carbon-flux units.</td>
+              <td>Needed when substrate uptake and internal fluxes use different units.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <p class="footer">
+      Conceptual basis: modified dynamic energy budget reserve dynamics from Tang and Riley (2025), combined with the Ohm's-law
+      fermentation-versus-respiration pathway comparison from Tang et al. (2021).
+    </p>
+  </main>
+</body>
+</html>
