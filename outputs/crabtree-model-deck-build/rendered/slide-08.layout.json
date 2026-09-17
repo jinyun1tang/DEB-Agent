@@ -1,0 +1,553 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/a15rhp",
+    "id": "a15rhp",
+    "slide": 8,
+    "layoutId": "50915d23-2a22-433b-9867-066851cb8efe",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "a83b2bd0-61b9-4c6a-ad28-1fe8f1e3644a",
+    "masterLayoutName": "Master",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "+mn-lt"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "50915d23-2a22-433b-9867-066851cb8efe",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "a83b2bd0-61b9-4c6a-ad28-1fe8f1e3644a",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "a83b2bd0-61b9-4c6a-ad28-1fe8f1e3644a",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/t4nmd4rq",
+      "id": "1",
+      "name": "slide-title",
+      "bbox": [
+        41.33,
+        36.12,
+        1197.33,
+        109.97
+      ],
+      "geometry": "rect",
+      "text": "Notebook run captures overflow, not diauxic ethanol use",
+      "textPreview": "Notebook run captures overflow, not diauxic ethanol use",
+      "resolvedFontSize": 38.67,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 38.67,
+        "typeface": "+mn-lt",
+        "color": "#000000",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Notebook run captures overflow, not diauxic ethanol use"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Notebook run captures overflow, not diauxic ethanol use",
+          "resolvedTextStyle": {
+            "fontSize": 38.67,
+            "color": "#000000",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Notebook run captures overflow, not diauxic ethanol use",
+              "fontSize": 38.67,
+              "color": "#000000",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/61c32psz",
+      "id": "2",
+      "name": "slide-number",
+      "bbox": [
+        1184.18,
+        659.24,
+        54.48,
+        25.33
+      ],
+      "geometry": "rect",
+      "text": "8",
+      "textPreview": "8",
+      "resolvedFontSize": 13.33,
+      "resolvedTextStyle": {
+        "anchor": 3,
+        "fontSize": 13.33,
+        "typeface": "+mn-lt",
+        "color": "#000000",
+        "alignment": "right",
+        "verticalAlignment": "bottom",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "8"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "8",
+          "resolvedTextStyle": {
+            "fontSize": 13.33,
+            "color": "#000000",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "8",
+              "fontSize": 13.33,
+              "color": "#000000",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/72l4bu9k",
+      "id": "3",
+      "name": "state-plot-frame",
+      "bbox": [
+        44,
+        160,
+        570,
+        452
+      ],
+      "geometry": "rect",
+      "fillColor": "#FFFFFF",
+      "lineColor": "#B8BCC4",
+      "lineWidth": 1
+    },
+    {
+      "order": 4,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/tsb6x4fy",
+      "id": "4",
+      "bbox": [
+        48,
+        167,
+        562,
+        438
+      ],
+      "alt": "Default high-glucose pulse simulation from notebook showing glucose, oxygen, reserve, living structural biomass, total biomass, fermentation allocation, and ethanol.",
+      "contentType": "image/png",
+      "imageFit": "contain",
+      "asset": {
+        "assetId": "4e77e260-9654-4861-9598-e7d16387e3ae",
+        "contentType": "image/png",
+        "byteLength": 74800
+      }
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/l03m9kre",
+      "id": "5",
+      "name": "overflow-card-surface",
+      "bbox": [
+        657.68,
+        158,
+        580.99,
+        138
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#F2F2F2",
+      "lineColor": "#F2F2F2",
+      "lineWidth": 0
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/yxc3yps3",
+      "id": "6",
+      "name": "overflow-card-text",
+      "bbox": [
+        687.68,
+        186,
+        520.99,
+        82
+      ],
+      "geometry": "rect",
+      "text": "Overflow appears\ntheta_F peaks near 0.97 and ethanol peaks near 40.5 in the illustrative high-glucose pulse.",
+      "textPreview": "Overflow appears | theta_F peaks near 0.97 and ethanol peaks near 40.5 in the illustrative high-glucose pulse.",
+      "resolvedFontSize": 21,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 21,
+        "typeface": "+mn-lt",
+        "color": "#000000",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 3,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Overflow appears"
+          },
+          {
+            "index": 2,
+            "text": "theta_F peaks near 0.97 and ethanol peaks near 40.5"
+          },
+          {
+            "index": 3,
+            "text": "in the illustrative high-glucose pulse."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Overflow appears",
+          "resolvedTextStyle": {
+            "fontSize": 21,
+            "color": "#000000",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Overflow appears",
+              "fontSize": 21,
+              "color": "#000000",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "theta_F peaks near 0.97 and ethanol peaks near 40.5 in the illustrative high-glucose pulse.",
+          "resolvedTextStyle": {
+            "fontSize": 21,
+            "color": "#000000",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "theta_F peaks near 0.97 and ethanol peaks near 40.5 in the illustrative high-glucose pulse.",
+              "fontSize": 21,
+              "color": "#000000",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/jyl47a9o",
+      "id": "7",
+      "name": "biomass-card-surface",
+      "bbox": [
+        657.68,
+        326,
+        580.99,
+        138
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#F2F2F2",
+      "lineColor": "#F2F2F2",
+      "lineWidth": 0
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/wvulwfax",
+      "id": "8",
+      "name": "biomass-card-text",
+      "bbox": [
+        687.68,
+        354,
+        520.99,
+        82
+      ],
+      "geometry": "rect",
+      "text": "Biomass distinction matters\nTotal biomass V(1+x_C) peaks at 10.75 while living structural V peaks at 3.45.",
+      "textPreview": "Biomass distinction matters | Total biomass V(1+x_C) peaks at 10.75 while living structural V peaks at 3.45.",
+      "resolvedFontSize": 21,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 21,
+        "typeface": "+mn-lt",
+        "color": "#000000",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 3,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Biomass distinction matters"
+          },
+          {
+            "index": 2,
+            "text": "Total biomass V(1+x_C) peaks at 10.75 while living"
+          },
+          {
+            "index": 3,
+            "text": "structural V peaks at 3.45."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Biomass distinction matters",
+          "resolvedTextStyle": {
+            "fontSize": 21,
+            "color": "#000000",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Biomass distinction matters",
+              "fontSize": 21,
+              "color": "#000000",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "Total biomass V(1+x_C) peaks at 10.75 while living structural V peaks at 3.45.",
+          "resolvedTextStyle": {
+            "fontSize": 21,
+            "color": "#000000",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Total biomass V(1+x_C) peaks at 10.75 while living structural V peaks at 3.45.",
+              "fontSize": 21,
+              "color": "#000000",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/xw3m5kri",
+      "id": "9",
+      "name": "gap-card-surface",
+      "bbox": [
+        657.68,
+        494,
+        580.99,
+        138
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#F2F2F2",
+      "lineColor": "#F2F2F2",
+      "lineWidth": 0
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/dcnyho76",
+      "id": "10",
+      "name": "gap-card-text",
+      "bbox": [
+        687.68,
+        522,
+        520.99,
+        82
+      ],
+      "geometry": "rect",
+      "text": "Known gap\nThe notebook trajectory still lacks oxygen-limited ethanol uptake after glucose depletion.",
+      "textPreview": "Known gap | The notebook trajectory still lacks oxygen-limited ethanol uptake after glucose depletion.",
+      "resolvedFontSize": 21,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 21,
+        "typeface": "+mn-lt",
+        "color": "#000000",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 3,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Known gap"
+          },
+          {
+            "index": 2,
+            "text": "The notebook trajectory still lacks oxygen-limited"
+          },
+          {
+            "index": 3,
+            "text": "ethanol uptake after glucose depletion."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Known gap",
+          "resolvedTextStyle": {
+            "fontSize": 21,
+            "color": "#000000",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Known gap",
+              "fontSize": 21,
+              "color": "#000000",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "The notebook trajectory still lacks oxygen-limited ethanol uptake after glucose depletion.",
+          "resolvedTextStyle": {
+            "fontSize": 21,
+            "color": "#000000",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "The notebook trajectory still lacks oxygen-limited ethanol uptake after glucose depletion.",
+              "fontSize": 21,
+              "color": "#000000",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}

@@ -1,0 +1,750 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/gfn9ih",
+    "id": "gfn9ih",
+    "slide": 6,
+    "layoutId": "50915d23-2a22-433b-9867-066851cb8efe",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "a83b2bd0-61b9-4c6a-ad28-1fe8f1e3644a",
+    "masterLayoutName": "Master",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "Helvetica Neue"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "50915d23-2a22-433b-9867-066851cb8efe",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "a83b2bd0-61b9-4c6a-ad28-1fe8f1e3644a",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "a83b2bd0-61b9-4c6a-ad28-1fe8f1e3644a",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/tcjyl8zm",
+      "id": "1",
+      "name": "Google-Shape-532-p58-2",
+      "bbox": [
+        1184.18,
+        659.24,
+        54.48,
+        25.33
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0"
+      },
+      "geometry": "rect",
+      "text": "6",
+      "textPreview": "6",
+      "resolvedFontSize": 13.33,
+      "resolvedTextStyle": {
+        "anchor": 3,
+        "fontSize": 13.33,
+        "typeface": "Helvetica Neue",
+        "color": "#000000",
+        "alignment": "right",
+        "verticalAlignment": "bottom",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "6"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "6",
+          "lineSpacingPercent": 98000,
+          "spaceAfter": 700,
+          "resolvedTextStyle": {
+            "anchor": 3,
+            "fontSize": 13.33,
+            "typeface": "Helvetica Neue",
+            "color": "#000000",
+            "alignment": "right",
+            "verticalAlignment": "bottom",
+            "wrap": "square",
+            "autoFit": "none",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "6",
+              "fontSize": 13.33,
+              "typeface": "Helvetica Neue",
+              "color": "#000000"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/6pszqtgv",
+      "id": "2",
+      "name": "Google-Shape-533-p58-3",
+      "bbox": [
+        41.33,
+        36.12,
+        1197.33,
+        109.97
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1"
+      },
+      "geometry": "rect",
+      "text": "Glucose feeds reserve; ethanol feeds oxygen-dependent respiration",
+      "textPreview": "Glucose feeds reserve; ethanol feeds oxygen-dependent respiration",
+      "resolvedFontSize": 38.67,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 38.67,
+        "typeface": "Helvetica Neue",
+        "color": "#000000",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Glucose feeds reserve; ethanol feeds oxygen-dependent respiration"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Glucose feeds reserve; ethanol feeds oxygen-dependent respiration",
+          "lineSpacingPercent": 98000,
+          "spaceAfter": 700,
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "fontSize": 38.67,
+            "typeface": "Helvetica Neue",
+            "color": "#000000",
+            "alignment": "left",
+            "verticalAlignment": "top",
+            "wrap": "square",
+            "autoFit": "none",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Glucose feeds reserve; ethanol feeds oxygen-dependent respiration",
+              "fontSize": 38.67,
+              "typeface": "Helvetica Neue",
+              "color": "#000000"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/7q1gjyhg",
+      "id": "3",
+      "name": "Google-Shape-534-p58-4",
+      "bbox": [
+        41.33,
+        213.33,
+        581.33,
+        371.11
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.2"
+      },
+      "geometry": "rect",
+      "text": "Glucose reserve input\nj_A,G = j_G,max G/(K_G + G)\n\n dx_C/dt = j_A,G - j_E,C - mu x_C\n\n j_E,C = v_E,C x_C/(K_E,C + x_C)",
+      "textPreview": "Glucose reserve input | j_A,G = j_G,max G/(K_G + G) |  |  dx_C/dt = j_A,G - j_E,C - mu x_C |  |  j_E,C = v_E,C x_C/(K_E,C + x_C)",
+      "resolvedFontSize": 32,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 32,
+        "typeface": "Helvetica Neue",
+        "color": "#000000",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 6,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Glucose reserve input"
+          },
+          {
+            "index": 2,
+            "text": "j_A,G = j_G,max G/(K_G + G)"
+          },
+          {
+            "index": 3,
+            "text": ""
+          },
+          {
+            "index": 4,
+            "text": " dx_C/dt = j_A,G - j_E,C - mu x_C"
+          },
+          {
+            "index": 5,
+            "text": ""
+          },
+          {
+            "index": 6,
+            "text": " j_E,C = v_E,C x_C/(K_E,C + x_C)"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Glucose reserve input",
+          "lineSpacingPercent": 98000,
+          "spaceAfter": 650,
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "fontSize": 32,
+            "typeface": "Helvetica Neue",
+            "color": "#000000",
+            "alignment": "left",
+            "verticalAlignment": "top",
+            "wrap": "square",
+            "autoFit": "none",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Glucose reserve input",
+              "fontSize": 28,
+              "typeface": "Helvetica Neue",
+              "color": "#000000"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "j_A,G = j_G,max G/(K_G + G)\n\n dx_C/dt = j_A,G - j_E,C - mu x_C\n\n j_E,C = v_E,C x_C/(K_E,C + x_C)",
+          "lineSpacingPercent": 110000,
+          "spaceAfter": 200,
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "fontSize": 32,
+            "typeface": "Helvetica Neue",
+            "color": "#000000",
+            "alignment": "left",
+            "verticalAlignment": "top",
+            "wrap": "square",
+            "autoFit": "none",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "j_A,G = j_G,max G/(K_G + G)\n\n dx_C/dt = j_A,G - j_E,C - mu x_C\n\n j_E,C = v_E,C x_C/(K_E,C + x_C)",
+              "fontSize": 21.33,
+              "typeface": "Helvetica Neue",
+              "color": "#000000"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/gfahwnyx",
+      "id": "4",
+      "name": "Content-Placeholder-3-5",
+      "bbox": [
+        656.86,
+        213.33,
+        581.33,
+        371.11
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.3"
+      },
+      "geometry": "rect",
+      "text": "Ethanol substrate gate\nI_G(G) = 1/(1 + (G/K_G,E)^n)\n\n j_A,EtOH = j_EtOH,max EtOH/(K_EtOH+EtOH) * O2/(K_O,EtOH+O2) * I_G\n\nEthanol uptake is weak while glucose is high.",
+      "textPreview": "Ethanol substrate gate | I_G(G) = 1/(1 + (G/K_G,E)^n) |  |  j_A,EtOH = j_EtOH,max EtOH/(K_EtOH+EtOH) * O2/(K_O,EtOH+O2) * I_G |  | Ethano...",
+      "resolvedFontSize": 32,
+      "resolvedTextStyle": {
+        "fontSize": 32,
+        "typeface": "Helvetica Neue",
+        "color": "#000000",
+        "alignment": "left",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 7,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Ethanol substrate gate"
+          },
+          {
+            "index": 2,
+            "text": "I_G(G) = 1/(1 + (G/K_G,E)^n)"
+          },
+          {
+            "index": 3,
+            "text": ""
+          },
+          {
+            "index": 4,
+            "text": " j_A,EtOH = j_EtOH,max EtOH/(K_EtOH+EtOH) *"
+          },
+          {
+            "index": 5,
+            "text": "O2/(K_O,EtOH+O2) * I_G"
+          },
+          {
+            "index": 6,
+            "text": ""
+          },
+          {
+            "index": 7,
+            "text": "Ethanol uptake is weak while glucose is high."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Ethanol substrate gate",
+          "lineSpacingPercent": 98000,
+          "spaceAfter": 650,
+          "resolvedTextStyle": {
+            "fontSize": 32,
+            "typeface": "Helvetica Neue",
+            "color": "#000000",
+            "alignment": "left",
+            "autoFit": "shrinkText",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Ethanol substrate gate",
+              "fontSize": 28,
+              "typeface": "Helvetica Neue",
+              "color": "#000000"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "I_G(G) = 1/(1 + (G/K_G,E)^n)\n\n j_A,EtOH = j_EtOH,max EtOH/(K_EtOH+EtOH) * O2/(K_O,EtOH+O2) * I_G\n\nEthanol uptake is weak while glucose is high.",
+          "lineSpacingPercent": 110000,
+          "spaceAfter": 200,
+          "resolvedTextStyle": {
+            "fontSize": 32,
+            "typeface": "Helvetica Neue",
+            "color": "#000000",
+            "alignment": "left",
+            "autoFit": "shrinkText",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "I_G(G) = 1/(1 + (G/K_G,E)^n)\n\n j_A,EtOH = j_EtOH,max EtOH/(K_EtOH+EtOH) * O2/(K_O,EtOH+O2) * I_G\n\nEthanol uptake is weak while glucose is high.",
+              "fontSize": 19.51,
+              "typeface": "Helvetica Neue",
+              "color": "#000000"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    }
+  ],
+  "composeRuns": [
+    {
+      "index": 1,
+      "frame": {
+        "left": 0,
+        "top": 0,
+        "width": 1280,
+        "height": 720
+      },
+      "baseUnit": 1,
+      "root": {
+        "path": "0",
+        "kind": "layers",
+        "name": "codex-grid-layout-library#slide-05",
+        "requestedSize": {
+          "width": {
+            "mode": "fill",
+            "value": 1
+          },
+          "height": {
+            "mode": "fill",
+            "value": 1
+          }
+        },
+        "intrinsicSize": {
+          "width": 1238.66,
+          "height": 684.57
+        },
+        "frame": {
+          "left": 0,
+          "top": 0,
+          "width": 1280,
+          "height": 720
+        },
+        "children": [
+          {
+            "path": "0.0",
+            "kind": "text",
+            "name": "Google-Shape-532-p58-2",
+            "position": {
+              "left": 1184.18,
+              "top": 659.24
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 54.48
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 25.33
+              }
+            },
+            "intrinsicSize": {
+              "width": 54.48,
+              "height": 25.33
+            },
+            "frame": {
+              "left": 1184.18,
+              "top": 659.24,
+              "width": 54.48,
+              "height": 25.33
+            },
+            "snappedFrame": {
+              "left": 1184.18,
+              "top": 659.24,
+              "width": 54.48,
+              "height": 25.33
+            },
+            "children": [],
+            "text": "6",
+            "transform": "none",
+            "element": {
+              "aid": "sh/tcjyl8zm",
+              "id": "1",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.1",
+            "kind": "text",
+            "name": "Google-Shape-533-p58-3",
+            "position": {
+              "left": 41.33,
+              "top": 36.12
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 1197.33
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 109.97
+              }
+            },
+            "intrinsicSize": {
+              "width": 1197.33,
+              "height": 109.97
+            },
+            "frame": {
+              "left": 41.33,
+              "top": 36.12,
+              "width": 1197.33,
+              "height": 109.97
+            },
+            "snappedFrame": {
+              "left": 41.33,
+              "top": 36.12,
+              "width": 1197.33,
+              "height": 109.97
+            },
+            "children": [],
+            "text": "Glucose feeds reserve; ethanol feeds oxygen-dependent respiration",
+            "transform": "none",
+            "element": {
+              "aid": "sh/6pszqtgv",
+              "id": "2",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.2",
+            "kind": "text",
+            "name": "Google-Shape-534-p58-4",
+            "position": {
+              "left": 41.33,
+              "top": 213.33
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 581.33
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 371.11
+              }
+            },
+            "intrinsicSize": {
+              "width": 581.33,
+              "height": 371.11
+            },
+            "frame": {
+              "left": 41.33,
+              "top": 213.33,
+              "width": 581.33,
+              "height": 371.11
+            },
+            "snappedFrame": {
+              "left": 41.33,
+              "top": 213.33,
+              "width": 581.33,
+              "height": 371.11
+            },
+            "children": [],
+            "text": "Glucose reserve input\nj_A,G = j_G,max G/(K_G + G)\n\n dx_C/dt = j_A,G - j_E,C - mu x_C\n\n j_E,C = v_E,C x_C/(K_E,C + x_C)",
+            "transform": "none",
+            "element": {
+              "aid": "sh/7q1gjyhg",
+              "id": "3",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.3",
+            "kind": "text",
+            "name": "Content-Placeholder-3-5",
+            "position": {
+              "left": 656.86,
+              "top": 213.33
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 581.33
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 371.11
+              }
+            },
+            "intrinsicSize": {
+              "width": 581.33,
+              "height": 371.11
+            },
+            "frame": {
+              "left": 656.86,
+              "top": 213.33,
+              "width": 581.33,
+              "height": 371.11
+            },
+            "snappedFrame": {
+              "left": 656.86,
+              "top": 213.33,
+              "width": 581.33,
+              "height": 371.11
+            },
+            "children": [],
+            "text": "Ethanol substrate gate\nI_G(G) = 1/(1 + (G/K_G,E)^n)\n\n j_A,EtOH = j_EtOH,max EtOH/(K_EtOH+EtOH) * O2/(K_O,EtOH+O2) * I_G\n\nEthanol uptake is weak while glucose is high.",
+            "transform": "none",
+            "element": {
+              "aid": "sh/gfahwnyx",
+              "id": "4",
+              "kind": "shape"
+            }
+          }
+        ],
+        "padding": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "alignItems": "stretch",
+        "justifyItems": "stretch",
+        "contentFrame": {
+          "left": 0,
+          "top": 0,
+          "width": 1280,
+          "height": 720
+        },
+        "items": [
+          {
+            "path": "0.0",
+            "frame": {
+              "left": 1184.18,
+              "top": 659.24,
+              "width": 54.48,
+              "height": 25.33
+            }
+          },
+          {
+            "path": "0.1",
+            "frame": {
+              "left": 41.33,
+              "top": 36.12,
+              "width": 1197.33,
+              "height": 109.97
+            }
+          },
+          {
+            "path": "0.2",
+            "frame": {
+              "left": 41.33,
+              "top": 213.33,
+              "width": 581.33,
+              "height": 371.11
+            }
+          },
+          {
+            "path": "0.3",
+            "frame": {
+              "left": 656.86,
+              "top": 213.33,
+              "width": 581.33,
+              "height": 371.11
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

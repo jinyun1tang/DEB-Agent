@@ -1,0 +1,21 @@
+Source ledger for Crabtree model presentation
+
+Primary model artifacts:
+- /Users/jinyuntang/work/github/DEB-Agent/references/crabtree-effect-model-sketch.html
+- /Users/jinyuntang/work/github/DEB-Agent/references/crabtree-effect-mdeb-model.ipynb
+
+Reference papers:
+- /Users/jinyuntang/work/github/DEB-Agent/references/bg-22-1809-2025.pdf
+  Tang, J. and Riley, W. J. (2025). Technical note: A modified formulation of dynamic energy budget theory for faster computation of biological growth. Biogeosciences, 22, 1809-1819.
+  Used for reserve dynamics, structural biomass dynamics, maintenance, and negative growth interpretation.
+- /Users/jinyuntang/work/github/DEB-Agent/references/2021-8 copy.pdf
+  Tang, J., Riley, W. J., Marschmann, G. L., and Brodie, E. L. (2021). Conceptualizing biogeochemical reactions with an Ohm's law analogy. Journal of Advances in Modeling Earth Systems.
+  Used for Ohm's-law pathway return framing and the Warburg/Crabtree explanation of fermentation under oxygen availability.
+
+Notebook-derived results:
+- Default high-glucose pulse metrics: theta_F_max=0.971, EtOH_max=40.49, V_living_structural_peak=3.448, B_total_peak=10.75, mu_min=-0.03.
+- Embedded SVG plots were extracted from the notebook and rasterized only for slide insertion.
+
+Deck narrative:
+- Audience: technical modelers discussing whether this Crabtree-effect sketch is mechanistically plausible and testable.
+- Job: introduce the biology, state the modeling hypothesis, and define evaluation metrics that connect the equations to batch-culture observations.

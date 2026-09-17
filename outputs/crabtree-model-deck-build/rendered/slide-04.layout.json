@@ -1,0 +1,903 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/cpr5sb",
+    "id": "cpr5sb",
+    "slide": 4,
+    "layoutId": "50915d23-2a22-433b-9867-066851cb8efe",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "a83b2bd0-61b9-4c6a-ad28-1fe8f1e3644a",
+    "masterLayoutName": "Master",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "+mn-lt"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "50915d23-2a22-433b-9867-066851cb8efe",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "a83b2bd0-61b9-4c6a-ad28-1fe8f1e3644a",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "a83b2bd0-61b9-4c6a-ad28-1fe8f1e3644a",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/b6l8jmhk",
+      "id": "1",
+      "name": "slide-title",
+      "bbox": [
+        41.33,
+        36.12,
+        1197.33,
+        109.97
+      ],
+      "geometry": "rect",
+      "text": "Evaluate the model against batch-culture signatures",
+      "textPreview": "Evaluate the model against batch-culture signatures",
+      "resolvedFontSize": 38.67,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 38.67,
+        "typeface": "+mn-lt",
+        "color": "#000000",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Evaluate the model against batch-culture signatures"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Evaluate the model against batch-culture signatures",
+          "resolvedTextStyle": {
+            "fontSize": 38.67,
+            "color": "#000000",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Evaluate the model against batch-culture signatures",
+              "fontSize": 38.67,
+              "color": "#000000",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/c7u9sry5",
+      "id": "2",
+      "name": "slide-number",
+      "bbox": [
+        1184.18,
+        659.24,
+        54.48,
+        25.33
+      ],
+      "geometry": "rect",
+      "text": "4",
+      "textPreview": "4",
+      "resolvedFontSize": 13.33,
+      "resolvedTextStyle": {
+        "anchor": 3,
+        "fontSize": 13.33,
+        "typeface": "+mn-lt",
+        "color": "#000000",
+        "alignment": "right",
+        "verticalAlignment": "bottom",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "4"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "4",
+          "resolvedTextStyle": {
+            "fontSize": 13.33,
+            "color": "#000000",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "4",
+              "fontSize": 13.33,
+              "color": "#000000",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/d83qlwzq",
+      "id": "3",
+      "name": "metrics-intro",
+      "bbox": [
+        42.09,
+        111.02,
+        1197.33,
+        106.27
+      ],
+      "geometry": "rect",
+      "text": "Evaluation metrics\nThe model should be judged by qualitative sequence and quantitative event timing: glucose exhaustion, ethanol peak, oxygen drawdown and recovery, biomass plateau or viability loss, and allocation hysteresis.",
+      "textPreview": "Evaluation metrics | The model should be judged by qualitative sequence and quantitative event timing: glucose exhaustion, ethanol peak, ...",
+      "resolvedFontSize": 21.33,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 21.33,
+        "typeface": "+mn-lt",
+        "color": "#000000",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 3,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Evaluation metrics"
+          },
+          {
+            "index": 2,
+            "text": "The model should be judged by qualitative sequence and quantitative event timing: glucose exhaustion, ethanol peak,"
+          },
+          {
+            "index": 3,
+            "text": "oxygen drawdown and recovery, biomass plateau or viability loss, and allocation hysteresis."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Evaluation metrics",
+          "resolvedTextStyle": {
+            "fontSize": 21.33,
+            "color": "#000000",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Evaluation metrics",
+              "fontSize": 21.33,
+              "color": "#000000",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "The model should be judged by qualitative sequence and quantitative event timing: glucose exhaustion, ethanol peak, oxygen drawdown and recovery, biomass plateau or viability loss, and allocation hysteresis.",
+          "resolvedTextStyle": {
+            "fontSize": 21.33,
+            "color": "#000000",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "The model should be judged by qualitative sequence and quantitative event timing: glucose exhaustion, ethanol peak, oxygen drawdown and recovery, biomass plateau or viability loss, and allocation hysteresis.",
+              "fontSize": 21.33,
+              "color": "#000000",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "table",
+      "scope": "slide",
+      "aid": "tb/zahwfqdk",
+      "id": "4",
+      "bbox": [
+        48,
+        244,
+        1184,
+        372
+      ],
+      "text": "Observation target | Metric | Expected batch signature | Interpretation\nGlucose | depletion time; uptake rate | Monotone decline during first phase | Constrains uptake and reserve formation\nEthanol | peak; production / use slopes | Accumulation during glucose, decline after diauxic shift | Tests overflow and ethanol-as-substrate dynamics\nDissolved O2 | minimum; recovery time | Demand can depress O2 but should not require an impossible negative pool | Tests respiratory oxygen limitation\nBiomass | living V and total V(1+x_C) | Total biomass plateaus; viable structure may decline later | Separates stationary OD from mortality\nAllocation | theta_F timing and hysteresis | High-G fermentation; relaxation after G depletion | Tests dynamic splitter timescale",
+      "textPreview": "Observation target | Metric | Expected batch signature | Interpretation | Glucose | depletion time; uptake rate | Monotone decline during...",
+      "rows": 6,
+      "cols": 4,
+      "cells": [
+        {
+          "index": 1,
+          "row": 1,
+          "column": 1,
+          "bbox": [
+            48,
+            244,
+            236,
+            62
+          ],
+          "text": "Observation target",
+          "textPreview": "Observation target",
+          "fillColor": "#EDEDED",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Observation target",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Observation target"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "row": 1,
+          "column": 2,
+          "bbox": [
+            284,
+            244,
+            230,
+            62
+          ],
+          "text": "Metric",
+          "textPreview": "Metric",
+          "fillColor": "#EDEDED",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Metric",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Metric"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "row": 1,
+          "column": 3,
+          "bbox": [
+            514,
+            244,
+            390,
+            62
+          ],
+          "text": "Expected batch signature",
+          "textPreview": "Expected batch signature",
+          "fillColor": "#EDEDED",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Expected batch signature",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Expected batch signature"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "row": 1,
+          "column": 4,
+          "bbox": [
+            904,
+            244,
+            328,
+            62
+          ],
+          "text": "Interpretation",
+          "textPreview": "Interpretation",
+          "fillColor": "#EDEDED",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Interpretation",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Interpretation"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "row": 2,
+          "column": 1,
+          "bbox": [
+            48,
+            306,
+            236,
+            62
+          ],
+          "text": "Glucose",
+          "textPreview": "Glucose",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Glucose",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Glucose"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "row": 2,
+          "column": 2,
+          "bbox": [
+            284,
+            306,
+            230,
+            62
+          ],
+          "text": "depletion time; uptake rate",
+          "textPreview": "depletion time; uptake rate",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "depletion time; uptake rate",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "depletion time; uptake rate"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "row": 2,
+          "column": 3,
+          "bbox": [
+            514,
+            306,
+            390,
+            62
+          ],
+          "text": "Monotone decline during first phase",
+          "textPreview": "Monotone decline during first phase",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Monotone decline during first phase",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Monotone decline during first phase"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "row": 2,
+          "column": 4,
+          "bbox": [
+            904,
+            306,
+            328,
+            62
+          ],
+          "text": "Constrains uptake and reserve formation",
+          "textPreview": "Constrains uptake and reserve formation",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Constrains uptake and reserve formation",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Constrains uptake and reserve formation"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "row": 3,
+          "column": 1,
+          "bbox": [
+            48,
+            368,
+            236,
+            62
+          ],
+          "text": "Ethanol",
+          "textPreview": "Ethanol",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Ethanol",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Ethanol"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "row": 3,
+          "column": 2,
+          "bbox": [
+            284,
+            368,
+            230,
+            62
+          ],
+          "text": "peak; production / use slopes",
+          "textPreview": "peak; production / use slopes",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "peak; production / use slopes",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "peak; production / use slopes"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "row": 3,
+          "column": 3,
+          "bbox": [
+            514,
+            368,
+            390,
+            62
+          ],
+          "text": "Accumulation during glucose, decline after diauxic shift",
+          "textPreview": "Accumulation during glucose, decline after diauxic shift",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Accumulation during glucose, decline after diauxic shift",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Accumulation during glucose, decline after diauxic shift"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "row": 3,
+          "column": 4,
+          "bbox": [
+            904,
+            368,
+            328,
+            62
+          ],
+          "text": "Tests overflow and ethanol-as-substrate dynamics",
+          "textPreview": "Tests overflow and ethanol-as-substrate dynamics",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Tests overflow and ethanol-as-substrate dynamics",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Tests overflow and ethanol-as-substrate dynamics"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 13,
+          "row": 4,
+          "column": 1,
+          "bbox": [
+            48,
+            430,
+            236,
+            62
+          ],
+          "text": "Dissolved O2",
+          "textPreview": "Dissolved O2",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Dissolved O2",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Dissolved O2"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 14,
+          "row": 4,
+          "column": 2,
+          "bbox": [
+            284,
+            430,
+            230,
+            62
+          ],
+          "text": "minimum; recovery time",
+          "textPreview": "minimum; recovery time",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "minimum; recovery time",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "minimum; recovery time"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 15,
+          "row": 4,
+          "column": 3,
+          "bbox": [
+            514,
+            430,
+            390,
+            62
+          ],
+          "text": "Demand can depress O2 but should not require an impossible negative pool",
+          "textPreview": "Demand can depress O2 but should not require an impossible negative pool",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Demand can depress O2 but should not require an impossible negative pool",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Demand can depress O2 but should not require an impossible negative pool"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 16,
+          "row": 4,
+          "column": 4,
+          "bbox": [
+            904,
+            430,
+            328,
+            62
+          ],
+          "text": "Tests respiratory oxygen limitation",
+          "textPreview": "Tests respiratory oxygen limitation",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Tests respiratory oxygen limitation",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Tests respiratory oxygen limitation"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 17,
+          "row": 5,
+          "column": 1,
+          "bbox": [
+            48,
+            492,
+            236,
+            62
+          ],
+          "text": "Biomass",
+          "textPreview": "Biomass",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Biomass",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Biomass"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 18,
+          "row": 5,
+          "column": 2,
+          "bbox": [
+            284,
+            492,
+            230,
+            62
+          ],
+          "text": "living V and total V(1+x_C)",
+          "textPreview": "living V and total V(1+x_C)",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "living V and total V(1+x_C)",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "living V and total V(1+x_C)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 19,
+          "row": 5,
+          "column": 3,
+          "bbox": [
+            514,
+            492,
+            390,
+            62
+          ],
+          "text": "Total biomass plateaus; viable structure may decline later",
+          "textPreview": "Total biomass plateaus; viable structure may decline later",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Total biomass plateaus; viable structure may decline later",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Total biomass plateaus; viable structure may decline later"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 20,
+          "row": 5,
+          "column": 4,
+          "bbox": [
+            904,
+            492,
+            328,
+            62
+          ],
+          "text": "Separates stationary OD from mortality",
+          "textPreview": "Separates stationary OD from mortality",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Separates stationary OD from mortality",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Separates stationary OD from mortality"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 21,
+          "row": 6,
+          "column": 1,
+          "bbox": [
+            48,
+            554,
+            236,
+            62
+          ],
+          "text": "Allocation",
+          "textPreview": "Allocation",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Allocation",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Allocation"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 22,
+          "row": 6,
+          "column": 2,
+          "bbox": [
+            284,
+            554,
+            230,
+            62
+          ],
+          "text": "theta_F timing and hysteresis",
+          "textPreview": "theta_F timing and hysteresis",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "theta_F timing and hysteresis",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "theta_F timing and hysteresis"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 23,
+          "row": 6,
+          "column": 3,
+          "bbox": [
+            514,
+            554,
+            390,
+            62
+          ],
+          "text": "High-G fermentation; relaxation after G depletion",
+          "textPreview": "High-G fermentation; relaxation after G depletion",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "High-G fermentation; relaxation after G depletion",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "High-G fermentation; relaxation after G depletion"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 24,
+          "row": 6,
+          "column": 4,
+          "bbox": [
+            904,
+            554,
+            328,
+            62
+          ],
+          "text": "Tests dynamic splitter timescale",
+          "textPreview": "Tests dynamic splitter timescale",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Tests dynamic splitter timescale",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Tests dynamic splitter timescale"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "composeRuns": []
+}

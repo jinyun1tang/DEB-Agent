@@ -1,0 +1,780 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/bj9btz",
+    "id": "bj9btz",
+    "slide": 7,
+    "layoutId": "50915d23-2a22-433b-9867-066851cb8efe",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "a83b2bd0-61b9-4c6a-ad28-1fe8f1e3644a",
+    "masterLayoutName": "Master",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "+mn-lt"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "50915d23-2a22-433b-9867-066851cb8efe",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "a83b2bd0-61b9-4c6a-ad28-1fe8f1e3644a",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "a83b2bd0-61b9-4c6a-ad28-1fe8f1e3644a",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/5cza1gbi",
+      "id": "1",
+      "name": "slide-title",
+      "bbox": [
+        41.33,
+        36.12,
+        1197.33,
+        109.97
+      ],
+      "geometry": "rect",
+      "text": "Softmax weights make the pathway switch continuous",
+      "textPreview": "Softmax weights make the pathway switch continuous",
+      "resolvedFontSize": 38.67,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 38.67,
+        "typeface": "+mn-lt",
+        "color": "#000000",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Softmax weights make the pathway switch continuous"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Softmax weights make the pathway switch continuous",
+          "resolvedTextStyle": {
+            "fontSize": 38.67,
+            "color": "#000000",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Softmax weights make the pathway switch continuous",
+              "fontSize": 38.67,
+              "color": "#000000",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/i98bqlcr",
+      "id": "2",
+      "name": "slide-number",
+      "bbox": [
+        1184.18,
+        659.24,
+        54.48,
+        25.33
+      ],
+      "geometry": "rect",
+      "text": "7",
+      "textPreview": "7",
+      "resolvedFontSize": 13.33,
+      "resolvedTextStyle": {
+        "anchor": 3,
+        "fontSize": 13.33,
+        "typeface": "+mn-lt",
+        "color": "#000000",
+        "alignment": "right",
+        "verticalAlignment": "bottom",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "7"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "7",
+          "resolvedTextStyle": {
+            "fontSize": 13.33,
+            "color": "#000000",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "7",
+              "fontSize": 13.33,
+              "color": "#000000",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/jahsz6tc",
+      "id": "3",
+      "name": "pathway-scores-title",
+      "bbox": [
+        52,
+        173,
+        560,
+        40
+      ],
+      "geometry": "rect",
+      "text": "Pathway scores",
+      "textPreview": "Pathway scores",
+      "resolvedFontSize": 28,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 28,
+        "typeface": "+mn-lt",
+        "color": "#000000",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Pathway scores"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Pathway scores",
+          "resolvedTextStyle": {
+            "fontSize": 28,
+            "color": "#000000",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Pathway scores",
+              "fontSize": 28,
+              "color": "#000000",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/wnqtobu1",
+      "id": "4",
+      "name": "pathway-scores-body",
+      "bbox": [
+        52,
+        225,
+        565,
+        205
+      ],
+      "geometry": "rect",
+      "text": "Pi_F = Y_ATP,F/(1/f_G + r_F)\n\nPi_R = Y_ATP,R/(1/f_G + r_TCA + r_ETC + 1/f_O2)\n\nU_F = beta Pi_F + beta_a ln(a_G/a_C)\nU_R = beta Pi_R",
+      "textPreview": "Pi_F = Y_ATP,F/(1/f_G + r_F) |  | Pi_R = Y_ATP,R/(1/f_G + r_TCA + r_ETC + 1/f_O2) |  | U_F = beta Pi_F + beta_a ln(a_G/a_C) | U_R = beta ...",
+      "resolvedFontSize": 21,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 21,
+        "typeface": "+mn-lt",
+        "color": "#000000",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 6,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Pi_F = Y_ATP,F/(1/f_G + r_F)"
+          },
+          {
+            "index": 2,
+            "text": ""
+          },
+          {
+            "index": 3,
+            "text": "Pi_R = Y_ATP,R/(1/f_G + r_TCA + r_ETC + 1/f_O2)"
+          },
+          {
+            "index": 4,
+            "text": ""
+          },
+          {
+            "index": 5,
+            "text": "U_F = beta Pi_F + beta_a ln(a_G/a_C)"
+          },
+          {
+            "index": 6,
+            "text": "U_R = beta Pi_R"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Pi_F = Y_ATP,F/(1/f_G + r_F)",
+          "resolvedTextStyle": {
+            "fontSize": 21,
+            "color": "#000000",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Pi_F = Y_ATP,F/(1/f_G + r_F)",
+              "fontSize": 21,
+              "color": "#000000",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 3,
+          "text": "Pi_R = Y_ATP,R/(1/f_G + r_TCA + r_ETC + 1/f_O2)",
+          "resolvedTextStyle": {
+            "fontSize": 21,
+            "color": "#000000",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Pi_R = Y_ATP,R/(1/f_G + r_TCA + r_ETC + 1/f_O2)",
+              "fontSize": 21,
+              "color": "#000000",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 5,
+          "text": "U_F = beta Pi_F + beta_a ln(a_G/a_C)",
+          "resolvedTextStyle": {
+            "fontSize": 21,
+            "color": "#000000",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "U_F = beta Pi_F + beta_a ln(a_G/a_C)",
+              "fontSize": 21,
+              "color": "#000000",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 6,
+          "text": "U_R = beta Pi_R",
+          "resolvedTextStyle": {
+            "fontSize": 21,
+            "color": "#000000",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "U_R = beta Pi_R",
+              "fontSize": 21,
+              "color": "#000000",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/h8zaxgbm",
+      "id": "5",
+      "name": "allocation-rule-title",
+      "bbox": [
+        52,
+        462,
+        560,
+        40
+      ],
+      "geometry": "rect",
+      "text": "Softmax allocation",
+      "textPreview": "Softmax allocation",
+      "resolvedFontSize": 28,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 28,
+        "typeface": "+mn-lt",
+        "color": "#000000",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Softmax allocation"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Softmax allocation",
+          "resolvedTextStyle": {
+            "fontSize": 28,
+            "color": "#000000",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Softmax allocation",
+              "fontSize": 28,
+              "color": "#000000",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ulobm1cv",
+      "id": "6",
+      "name": "allocation-rule-body",
+      "bbox": [
+        52,
+        512,
+        565,
+        122
+      ],
+      "geometry": "rect",
+      "text": "theta_i* = exp(U_i) / [exp(U_F)+exp(U_R)]\n\ntheta_F* = 1 / [1 + exp(-(U_F - U_R))]\n\ndtheta_F/dt = (theta_F* - theta_F)/tau_reg",
+      "textPreview": "theta_i* = exp(U_i) / [exp(U_F)+exp(U_R)] |  | theta_F* = 1 / [1 + exp(-(U_F - U_R))] |  | dtheta_F/dt = (theta_F* - theta_F)/tau_reg",
+      "resolvedFontSize": 21,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 21,
+        "typeface": "+mn-lt",
+        "color": "#000000",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 5,
+        "lines": [
+          {
+            "index": 1,
+            "text": "theta_i* = exp(U_i) / [exp(U_F)+exp(U_R)]"
+          },
+          {
+            "index": 2,
+            "text": ""
+          },
+          {
+            "index": 3,
+            "text": "theta_F* = 1 / [1 + exp(-(U_F - U_R))]"
+          },
+          {
+            "index": 4,
+            "text": ""
+          },
+          {
+            "index": 5,
+            "text": "dtheta_F/dt = (theta_F* - theta_F)/tau_reg"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "theta_i* = exp(U_i) / [exp(U_F)+exp(U_R)]",
+          "resolvedTextStyle": {
+            "fontSize": 21,
+            "color": "#000000",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "theta_i* = exp(U_i) / [exp(U_F)+exp(U_R)]",
+              "fontSize": 21,
+              "color": "#000000",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 3,
+          "text": "theta_F* = 1 / [1 + exp(-(U_F - U_R))]",
+          "resolvedTextStyle": {
+            "fontSize": 21,
+            "color": "#000000",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "theta_F* = 1 / [1 + exp(-(U_F - U_R))]",
+              "fontSize": 21,
+              "color": "#000000",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 5,
+          "text": "dtheta_F/dt = (theta_F* - theta_F)/tau_reg",
+          "resolvedTextStyle": {
+            "fontSize": 21,
+            "color": "#000000",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "dtheta_F/dt = (theta_F* - theta_F)/tau_reg",
+              "fontSize": 21,
+              "color": "#000000",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/vmhsv6tg",
+      "id": "7",
+      "name": "softmax-graph-title",
+      "bbox": [
+        680,
+        173,
+        535,
+        40
+      ],
+      "geometry": "rect",
+      "text": "Transition captured by softmax",
+      "textPreview": "Transition captured by softmax",
+      "resolvedFontSize": 28,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 28,
+        "typeface": "+mn-lt",
+        "color": "#000000",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Transition captured by softmax"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Transition captured by softmax",
+          "resolvedTextStyle": {
+            "fontSize": 28,
+            "color": "#000000",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Transition captured by softmax",
+              "fontSize": 28,
+              "color": "#000000",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/8j6tkrup",
+      "id": "8",
+      "name": "softmax-graph-caption",
+      "bbox": [
+        680,
+        214,
+        535,
+        62
+      ],
+      "geometry": "rect",
+      "text": "When U_F - U_R crosses zero, allocation shifts smoothly from respiration to fermentation.",
+      "textPreview": "When U_F - U_R crosses zero, allocation shifts smoothly from respiration to fermentation.",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 18,
+        "typeface": "+mn-lt",
+        "color": "#333333",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "When U_F - U_R crosses zero, allocation shifts smoothly from"
+          },
+          {
+            "index": 2,
+            "text": "respiration to fermentation."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "When U_F - U_R crosses zero, allocation shifts smoothly from respiration to fermentation.",
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "color": "#333333",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "When U_F - U_R crosses zero, allocation shifts smoothly from respiration to fermentation.",
+              "fontSize": 18,
+              "color": "#333333",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 9,
+      "kind": "chart",
+      "scope": "slide",
+      "aid": "ch/h4ra5on6",
+      "id": "9",
+      "bbox": [
+        674,
+        295,
+        555,
+        305
+      ],
+      "chartType": "line"
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/donehcba",
+      "id": "10",
+      "name": "softmax-threshold-note",
+      "bbox": [
+        772,
+        604,
+        366,
+        28
+      ],
+      "geometry": "rect",
+      "text": "At equal scores: theta_F* = theta_R* = 0.5",
+      "textPreview": "At equal scores: theta_F* = theta_R* = 0.5",
+      "resolvedFontSize": 16,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 16,
+        "typeface": "+mn-lt",
+        "color": "#333333",
+        "alignment": "center",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "At equal scores: theta_F* = theta_R* = 0.5"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "At equal scores: theta_F* = theta_R* = 0.5",
+          "resolvedTextStyle": {
+            "fontSize": 16,
+            "color": "#333333",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "At equal scores: theta_F* = theta_R* = 0.5",
+              "fontSize": 16,
+              "color": "#333333",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}

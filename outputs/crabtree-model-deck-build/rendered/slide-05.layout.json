@@ -1,0 +1,1396 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/nv8eib",
+    "id": "nv8eib",
+    "slide": 5,
+    "layoutId": "50915d23-2a22-433b-9867-066851cb8efe",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "a83b2bd0-61b9-4c6a-ad28-1fe8f1e3644a",
+    "masterLayoutName": "Master",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "+mn-lt",
+      "Helvetica Neue"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "50915d23-2a22-433b-9867-066851cb8efe",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "a83b2bd0-61b9-4c6a-ad28-1fe8f1e3644a",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "a83b2bd0-61b9-4c6a-ad28-1fe8f1e3644a",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ad4be90f",
+      "id": "1",
+      "name": "Google-Shape-532-p58-2",
+      "bbox": [
+        1184.18,
+        659.24,
+        54.48,
+        25.33
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0"
+      },
+      "geometry": "rect",
+      "text": "5",
+      "textPreview": "5",
+      "resolvedFontSize": 13.33,
+      "resolvedTextStyle": {
+        "anchor": 3,
+        "fontSize": 13.33,
+        "typeface": "Helvetica Neue",
+        "color": "#000000",
+        "alignment": "right",
+        "verticalAlignment": "bottom",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "5"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "5",
+          "lineSpacingPercent": 98000,
+          "spaceAfter": 700,
+          "resolvedTextStyle": {
+            "anchor": 3,
+            "fontSize": 13.33,
+            "typeface": "Helvetica Neue",
+            "color": "#000000",
+            "alignment": "right",
+            "verticalAlignment": "bottom",
+            "wrap": "square",
+            "autoFit": "none",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "5",
+              "fontSize": 13.33,
+              "typeface": "Helvetica Neue",
+              "color": "#000000"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/xgfupoz6",
+      "id": "2",
+      "name": "Google-Shape-533-p58-3",
+      "bbox": [
+        41.33,
+        36.12,
+        1197.33,
+        109.97
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1"
+      },
+      "geometry": "rect",
+      "text": "State variables separate reserve, allocation, and biomass",
+      "textPreview": "State variables separate reserve, allocation, and biomass",
+      "resolvedFontSize": 38.67,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 38.67,
+        "typeface": "Helvetica Neue",
+        "color": "#000000",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "State variables separate reserve, allocation, and biomass"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "State variables separate reserve, allocation, and biomass",
+          "lineSpacingPercent": 98000,
+          "spaceAfter": 700,
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "fontSize": 38.67,
+            "typeface": "Helvetica Neue",
+            "color": "#000000",
+            "alignment": "left",
+            "verticalAlignment": "top",
+            "wrap": "square",
+            "autoFit": "none",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "State variables separate reserve, allocation, and biomass",
+              "fontSize": 38.67,
+              "typeface": "Helvetica Neue",
+              "color": "#000000"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/wf6tgjil",
+      "id": "3",
+      "name": "Google-Shape-534-p58-4",
+      "bbox": [
+        41.33,
+        213.33,
+        581.33,
+        371.11
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.2"
+      },
+      "geometry": "rect",
+      "text": "State variables\nG: glucose substrate\nEtOH: ethanol product and substrate\nO2: dissolved oxygen\nx_C: internal carbon reserve\nV: living structural biomass\ntheta_F: fermentation allocation",
+      "textPreview": "State variables | G: glucose substrate | EtOH: ethanol product and substrate | O2: dissolved oxygen | x_C: internal carbon reserve | V: l...",
+      "resolvedFontSize": 32,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 32,
+        "typeface": "Helvetica Neue",
+        "color": "#000000",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 7,
+        "lines": [
+          {
+            "index": 1,
+            "text": "State variables"
+          },
+          {
+            "index": 2,
+            "text": "G: glucose substrate"
+          },
+          {
+            "index": 3,
+            "text": "EtOH: ethanol product and substrate"
+          },
+          {
+            "index": 4,
+            "text": "O2: dissolved oxygen"
+          },
+          {
+            "index": 5,
+            "text": "x_C: internal carbon reserve"
+          },
+          {
+            "index": 6,
+            "text": "V: living structural biomass"
+          },
+          {
+            "index": 7,
+            "text": "theta_F: fermentation allocation"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "State variables",
+          "lineSpacingPercent": 98000,
+          "spaceAfter": 650,
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "fontSize": 32,
+            "typeface": "Helvetica Neue",
+            "color": "#000000",
+            "alignment": "left",
+            "verticalAlignment": "top",
+            "wrap": "square",
+            "autoFit": "none",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "State variables",
+              "fontSize": 28,
+              "typeface": "Helvetica Neue",
+              "color": "#000000"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "G: glucose substrate\nEtOH: ethanol product and substrate\nO2: dissolved oxygen\nx_C: internal carbon reserve\nV: living structural biomass\ntheta_F: fermentation allocation",
+          "lineSpacingPercent": 110000,
+          "spaceAfter": 200,
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "fontSize": 32,
+            "typeface": "Helvetica Neue",
+            "color": "#000000",
+            "alignment": "left",
+            "verticalAlignment": "top",
+            "wrap": "square",
+            "autoFit": "none",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "G: glucose substrate\nEtOH: ethanol product and substrate\nO2: dissolved oxygen\nx_C: internal carbon reserve\nV: living structural biomass\ntheta_F: fermentation allocation",
+              "fontSize": 21.33,
+              "typeface": "Helvetica Neue",
+              "color": "#000000"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/nadsjeh4",
+      "id": "4",
+      "name": "Content-Placeholder-3-5",
+      "bbox": [
+        656.86,
+        213.33,
+        581.33,
+        371.11
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.3"
+      },
+      "geometry": "rect",
+      "resolvedFontSize": 32,
+      "resolvedTextStyle": {
+        "fontSize": 32,
+        "typeface": "Helvetica Neue",
+        "color": "#000000",
+        "alignment": "left",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          },
+          {
+            "index": 2,
+            "text": ""
+          }
+        ]
+      }
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/294ba90j",
+      "id": "5",
+      "name": "cover-existing-region",
+      "bbox": [
+        656.86,
+        190,
+        581.33,
+        440
+      ],
+      "geometry": "rect",
+      "fillColor": "#FFFFFF",
+      "lineColor": "#FFFFFF",
+      "lineWidth": 0
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/pcval4za",
+      "id": "6",
+      "name": "glucose-node",
+      "bbox": [
+        680,
+        205,
+        170,
+        78
+      ],
+      "geometry": "roundRect",
+      "text": "Glucose G\nprimary substrate",
+      "textPreview": "Glucose G | primary substrate",
+      "resolvedFontSize": 19,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 19,
+        "typeface": "+mn-lt",
+        "color": "#000000",
+        "alignment": "center",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 3,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Glucose G"
+          },
+          {
+            "index": 2,
+            "text": "primary"
+          },
+          {
+            "index": 3,
+            "text": "substrate"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Glucose G",
+          "resolvedTextStyle": {
+            "fontSize": 19,
+            "color": "#000000",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Glucose G",
+              "fontSize": 19,
+              "color": "#000000",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "primary substrate",
+          "resolvedTextStyle": {
+            "fontSize": 19,
+            "color": "#000000",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "primary substrate",
+              "fontSize": 19,
+              "color": "#000000",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "fillColor": "#FFFFFF",
+      "lineColor": "#B8BCC4",
+      "lineWidth": 1.3
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/obmtczip",
+      "id": "7",
+      "name": "reserve-node",
+      "bbox": [
+        895,
+        205,
+        170,
+        78
+      ],
+      "geometry": "roundRect",
+      "text": "C reserve\nx_C and j_E,C",
+      "textPreview": "C reserve | x_C and j_E,C",
+      "resolvedFontSize": 19,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 19,
+        "typeface": "+mn-lt",
+        "color": "#000000",
+        "alignment": "center",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "C reserve"
+          },
+          {
+            "index": 2,
+            "text": "x_C and j_E,C"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "C reserve",
+          "resolvedTextStyle": {
+            "fontSize": 19,
+            "color": "#000000",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "C reserve",
+              "fontSize": 19,
+              "color": "#000000",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "x_C and j_E,C",
+          "resolvedTextStyle": {
+            "fontSize": 19,
+            "color": "#000000",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "x_C and j_E,C",
+              "fontSize": 19,
+              "color": "#000000",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "fillColor": "#FFFFFF",
+      "lineColor": "#B8BCC4",
+      "lineWidth": 1.3
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/f6tsfuhs",
+      "id": "8",
+      "name": "fermentation-node",
+      "bbox": [
+        785,
+        330,
+        170,
+        78
+      ],
+      "geometry": "roundRect",
+      "text": "Fermentation\nethanol + ATP",
+      "textPreview": "Fermentation | ethanol + ATP",
+      "resolvedFontSize": 19,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 19,
+        "typeface": "+mn-lt",
+        "color": "#000000",
+        "alignment": "center",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Fermentation"
+          },
+          {
+            "index": 2,
+            "text": "ethanol + ATP"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Fermentation",
+          "resolvedTextStyle": {
+            "fontSize": 19,
+            "color": "#000000",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Fermentation",
+              "fontSize": 19,
+              "color": "#000000",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "ethanol + ATP",
+          "resolvedTextStyle": {
+            "fontSize": 19,
+            "color": "#000000",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "ethanol + ATP",
+              "fontSize": 19,
+              "color": "#000000",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "fillColor": "#F2F2F2",
+      "lineColor": "#B8BCC4",
+      "lineWidth": 1.3
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/e5kb6p0n",
+      "id": "9",
+      "name": "respiration-node",
+      "bbox": [
+        1005,
+        330,
+        185,
+        78
+      ],
+      "geometry": "roundRect",
+      "text": "Respiration\nATP + O2 demand",
+      "textPreview": "Respiration | ATP + O2 demand",
+      "resolvedFontSize": 19,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 19,
+        "typeface": "+mn-lt",
+        "color": "#000000",
+        "alignment": "center",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Respiration"
+          },
+          {
+            "index": 2,
+            "text": "ATP + O2 demand"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Respiration",
+          "resolvedTextStyle": {
+            "fontSize": 19,
+            "color": "#000000",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Respiration",
+              "fontSize": 19,
+              "color": "#000000",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "ATP + O2 demand",
+          "resolvedTextStyle": {
+            "fontSize": 19,
+            "color": "#000000",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "ATP + O2 demand",
+              "fontSize": 19,
+              "color": "#000000",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "fillColor": "#F2F2F2",
+      "lineColor": "#B8BCC4",
+      "lineWidth": 1.3
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/s7e94jm1",
+      "id": "10",
+      "name": "ethanol-node",
+      "bbox": [
+        785,
+        470,
+        170,
+        78
+      ],
+      "geometry": "roundRect",
+      "text": "Ethanol\nproduct, then substrate",
+      "textPreview": "Ethanol | product, then substrate",
+      "resolvedFontSize": 19,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 19,
+        "typeface": "+mn-lt",
+        "color": "#000000",
+        "alignment": "center",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 3,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Ethanol"
+          },
+          {
+            "index": 2,
+            "text": "product, then"
+          },
+          {
+            "index": 3,
+            "text": "substrate"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Ethanol",
+          "resolvedTextStyle": {
+            "fontSize": 19,
+            "color": "#000000",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Ethanol",
+              "fontSize": 19,
+              "color": "#000000",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "product, then substrate",
+          "resolvedTextStyle": {
+            "fontSize": 19,
+            "color": "#000000",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "product, then substrate",
+              "fontSize": 19,
+              "color": "#000000",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "fillColor": "#FFFFFF",
+      "lineColor": "#B8BCC4",
+      "lineWidth": 1.3
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/t8nqxo3m",
+      "id": "11",
+      "name": "biomass-node",
+      "bbox": [
+        1005,
+        470,
+        185,
+        78
+      ],
+      "geometry": "roundRect",
+      "text": "Living V\ngrowth minus mortality",
+      "textPreview": "Living V | growth minus mortality",
+      "resolvedFontSize": 19,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 19,
+        "typeface": "+mn-lt",
+        "color": "#000000",
+        "alignment": "center",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 3,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Living V"
+          },
+          {
+            "index": 2,
+            "text": "growth minus"
+          },
+          {
+            "index": 3,
+            "text": "mortality"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Living V",
+          "resolvedTextStyle": {
+            "fontSize": 19,
+            "color": "#000000",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Living V",
+              "fontSize": 19,
+              "color": "#000000",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "growth minus mortality",
+          "resolvedTextStyle": {
+            "fontSize": 19,
+            "color": "#000000",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "growth minus mortality",
+              "fontSize": 19,
+              "color": "#000000",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "fillColor": "#FFFFFF",
+      "lineColor": "#B8BCC4",
+      "lineWidth": 1.3
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/6lwr294v",
+      "id": "12",
+      "bbox": [
+        850,
+        244,
+        45,
+        0
+      ],
+      "geometry": "straightConnector1",
+      "lineColor": "#B8BCC4",
+      "lineWidth": 2
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/7658velg",
+      "id": "13",
+      "bbox": [
+        870,
+        283,
+        110,
+        47
+      ],
+      "horizontalFlip": true,
+      "geometry": "bentConnector4",
+      "lineColor": "#A65F4A",
+      "lineWidth": 2.4
+    },
+    {
+      "order": 14,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/kju90zmp",
+      "id": "14",
+      "bbox": [
+        1065,
+        244,
+        32.5,
+        86
+      ],
+      "geometry": "bentConnector2",
+      "lineColor": "#3D8DFF",
+      "lineWidth": 2.4
+    },
+    {
+      "order": 15,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/5k3qt43a",
+      "id": "15",
+      "bbox": [
+        870,
+        408,
+        0,
+        62
+      ],
+      "geometry": "straightConnector1",
+      "lineColor": "#A65F4A",
+      "lineWidth": 2.4
+    },
+    {
+      "order": 16,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ihcryp4z",
+      "id": "16",
+      "bbox": [
+        1097.5,
+        408,
+        0,
+        62
+      ],
+      "geometry": "straightConnector1",
+      "lineColor": "#3D8DFF",
+      "lineWidth": 2.4
+    },
+    {
+      "order": 17,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/jil8rulk",
+      "id": "17",
+      "bbox": [
+        955,
+        369,
+        50,
+        140
+      ],
+      "verticalFlip": true,
+      "geometry": "bentConnector3",
+      "lineColor": "#A65F4A",
+      "lineWidth": 2
+    },
+    {
+      "order": 18,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/4fy9c329",
+      "id": "18",
+      "name": "diagram-caption",
+      "bbox": [
+        682,
+        575,
+        510,
+        52
+      ],
+      "geometry": "rect",
+      "text": "Glucose drives overflow fermentation; ethanol can later feed respiration when glucose repression weakens.",
+      "textPreview": "Glucose drives overflow fermentation; ethanol can later feed respiration when glucose repression weakens.",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 18,
+        "typeface": "+mn-lt",
+        "color": "#333333",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Glucose drives overflow fermentation; ethanol can later feed"
+          },
+          {
+            "index": 2,
+            "text": "respiration when glucose repression weakens."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Glucose drives overflow fermentation; ethanol can later feed respiration when glucose repression weakens.",
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "color": "#333333",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Glucose drives overflow fermentation; ethanol can later feed respiration when glucose repression weakens.",
+              "fontSize": 18,
+              "color": "#333333",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": [
+    {
+      "index": 1,
+      "frame": {
+        "left": 0,
+        "top": 0,
+        "width": 1280,
+        "height": 720
+      },
+      "baseUnit": 1,
+      "root": {
+        "path": "0",
+        "kind": "layers",
+        "name": "codex-grid-layout-library#slide-05",
+        "requestedSize": {
+          "width": {
+            "mode": "fill",
+            "value": 1
+          },
+          "height": {
+            "mode": "fill",
+            "value": 1
+          }
+        },
+        "intrinsicSize": {
+          "width": 1238.66,
+          "height": 684.57
+        },
+        "frame": {
+          "left": 0,
+          "top": 0,
+          "width": 1280,
+          "height": 720
+        },
+        "children": [
+          {
+            "path": "0.0",
+            "kind": "text",
+            "name": "Google-Shape-532-p58-2",
+            "position": {
+              "left": 1184.18,
+              "top": 659.24
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 54.48
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 25.33
+              }
+            },
+            "intrinsicSize": {
+              "width": 54.48,
+              "height": 25.33
+            },
+            "frame": {
+              "left": 1184.18,
+              "top": 659.24,
+              "width": 54.48,
+              "height": 25.33
+            },
+            "snappedFrame": {
+              "left": 1184.18,
+              "top": 659.24,
+              "width": 54.48,
+              "height": 25.33
+            },
+            "children": [],
+            "text": "5",
+            "transform": "none",
+            "element": {
+              "aid": "sh/ad4be90f",
+              "id": "1",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.1",
+            "kind": "text",
+            "name": "Google-Shape-533-p58-3",
+            "position": {
+              "left": 41.33,
+              "top": 36.12
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 1197.33
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 109.97
+              }
+            },
+            "intrinsicSize": {
+              "width": 1197.33,
+              "height": 109.97
+            },
+            "frame": {
+              "left": 41.33,
+              "top": 36.12,
+              "width": 1197.33,
+              "height": 109.97
+            },
+            "snappedFrame": {
+              "left": 41.33,
+              "top": 36.12,
+              "width": 1197.33,
+              "height": 109.97
+            },
+            "children": [],
+            "text": "State variables separate reserve, allocation, and biomass",
+            "transform": "none",
+            "element": {
+              "aid": "sh/xgfupoz6",
+              "id": "2",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.2",
+            "kind": "text",
+            "name": "Google-Shape-534-p58-4",
+            "position": {
+              "left": 41.33,
+              "top": 213.33
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 581.33
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 371.11
+              }
+            },
+            "intrinsicSize": {
+              "width": 581.33,
+              "height": 371.11
+            },
+            "frame": {
+              "left": 41.33,
+              "top": 213.33,
+              "width": 581.33,
+              "height": 371.11
+            },
+            "snappedFrame": {
+              "left": 41.33,
+              "top": 213.33,
+              "width": 581.33,
+              "height": 371.11
+            },
+            "children": [],
+            "text": "State variables\nG: glucose substrate\nEtOH: ethanol product and substrate\nO2: dissolved oxygen\nx_C: internal carbon reserve\nV: living structural biomass\ntheta_F: fermentation allocation",
+            "transform": "none",
+            "element": {
+              "aid": "sh/wf6tgjil",
+              "id": "3",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.3",
+            "kind": "text",
+            "name": "Content-Placeholder-3-5",
+            "position": {
+              "left": 656.86,
+              "top": 213.33
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 581.33
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 371.11
+              }
+            },
+            "intrinsicSize": {
+              "width": 581.33,
+              "height": 371.11
+            },
+            "frame": {
+              "left": 656.86,
+              "top": 213.33,
+              "width": 581.33,
+              "height": 371.11
+            },
+            "snappedFrame": {
+              "left": 656.86,
+              "top": 213.33,
+              "width": 581.33,
+              "height": 371.11
+            },
+            "children": [],
+            "text": "\n",
+            "transform": "none",
+            "element": {
+              "aid": "sh/nadsjeh4",
+              "id": "4",
+              "kind": "shape"
+            }
+          }
+        ],
+        "padding": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "alignItems": "stretch",
+        "justifyItems": "stretch",
+        "contentFrame": {
+          "left": 0,
+          "top": 0,
+          "width": 1280,
+          "height": 720
+        },
+        "items": [
+          {
+            "path": "0.0",
+            "frame": {
+              "left": 1184.18,
+              "top": 659.24,
+              "width": 54.48,
+              "height": 25.33
+            }
+          },
+          {
+            "path": "0.1",
+            "frame": {
+              "left": 41.33,
+              "top": 36.12,
+              "width": 1197.33,
+              "height": 109.97
+            }
+          },
+          {
+            "path": "0.2",
+            "frame": {
+              "left": 41.33,
+              "top": 213.33,
+              "width": 581.33,
+              "height": 371.11
+            }
+          },
+          {
+            "path": "0.3",
+            "frame": {
+              "left": 656.86,
+              "top": 213.33,
+              "width": 581.33,
+              "height": 371.11
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
