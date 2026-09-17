@@ -58,9 +58,9 @@
     }
 
     main {
-      width: min(1120px, calc(100% - 32px));
+      width: min(1180px, calc(100% - 16px));
       margin: 0 auto;
-      padding: 32px 0;
+      padding: 16px 0;
       display: grid;
       gap: 22px;
     }
@@ -206,6 +206,8 @@
       padding: 8px 10px;
       background: var(--background);
       border-radius: 0 6px 6px 0;
+      min-width: 0;
+      overflow: hidden;
       overflow-wrap: anywhere;
     }
 
@@ -214,6 +216,8 @@
       display: grid;
       gap: 4px;
       margin-top: 4px;
+      min-width: 0;
+      max-width: 100%;
       overflow-x: auto;
       font-size: 0.9rem;
     }
@@ -223,6 +227,8 @@
       font-size: 0.9rem;
       line-height: 1.65;
       margin: 0;
+      min-width: 100%;
+      width: max-content;
       white-space: nowrap;
     }
 
@@ -239,7 +245,7 @@
 
     .bands {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 12px;
     }
 
@@ -337,8 +343,8 @@
 
     @media (max-width: 780px) {
       main {
-        width: min(100% - 24px, 1120px);
-        padding: 20px 0;
+        width: min(100% - 12px, 1180px);
+        padding: 12px 0;
       }
 
       .grid,
@@ -368,7 +374,8 @@
       <p class="lede">
         A compact model couples mDEB reserve dynamics to an Ohm's-law pathway splitter:
         glucose drives the Crabtree overflow, ethanol is produced by fermentation, and ethanol
-        can later become a second respiratory substrate when glucose repression relaxes.
+        later becomes a second respiratory substrate. Slow induction of ethanol-use and
+        respiratory capacity creates the diauxic lag between these two growth phases.
       </p>
     </header>
 
@@ -449,6 +456,7 @@
           <rect class="tag" x="762" y="178" width="108" height="30"></rect>
           <text class="tag-text" x="816" y="193">j<tspan baseline-shift="sub">A,EtOH</tspan></text>
         </svg>
+        <p class="note">The dashed ethanol return is not an instantaneous substrate switch: it is gated by the slowly induced states \(\phi_E\rho_R\), which generate the diauxic lag.</p>
       </section>
 
       <section class="panel equations" aria-labelledby="equations-title">
@@ -466,20 +474,22 @@
           <div class="math-block">
             <p class="equation-line">\( j_{A,G}(G)=j_{G,\max}\frac{G}{K_G+G} \)</p>
             <p class="equation-line">\( I_G(G)=\frac{1}{1+(G/K_{G,E})^n} \)</p>
-            <p class="equation-line">\( j_{A,\mathrm{EtOH}}=j_{\mathrm{EtOH},\max}\frac{\mathrm{EtOH}}{K_{\mathrm{EtOH}}+\mathrm{EtOH}}\frac{O_2}{K_{O,\mathrm{EtOH}}+O_2}I_G(G) \)</p>
+            <p class="equation-line">\( \phi_E^\ast=I_G(G),\qquad \frac{d\phi_E}{dt}=\frac{\phi_E^\ast-\phi_E}{\tau_E} \)</p>
+            <p class="equation-line">\( \rho_R^\ast=\rho_{R,0}+(1-\rho_{R,0})I_G(G),\qquad \frac{d\rho_R}{dt}=\frac{\rho_R^\ast-\rho_R}{\tau_R} \)</p>
+            <p class="equation-line">\( j_{A,\mathrm{EtOH}}=j_{\mathrm{EtOH},\max}\phi_E\rho_R\frac{\mathrm{EtOH}}{K_{\mathrm{EtOH}}+\mathrm{EtOH}}\frac{O_2}{K_{O,\mathrm{EtOH}}+O_2} \)</p>
             <p class="equation-line">\( \frac{dG}{dt}=D(G_{in}-G)-\frac{j_{A,G}(G)V}{Y_{X,G}} \)</p>
             <p class="equation-line">\( \frac{d\mathrm{EtOH}}{dt}=D(\mathrm{EtOH}_{in}-\mathrm{EtOH})+y_{\mathrm{EtOH}}j_FV-\frac{j_{A,\mathrm{EtOH}}V}{Y_{X,\mathrm{EtOH}}}-\lambda_{\mathrm{EtOH}}\mathrm{EtOH} \)</p>
             <p class="equation-line">\( f_{O_2}(O_2)=k_O\frac{O_2}{K_O+O_2} \)</p>
             <p class="equation-line">\( \frac{dO_2}{dt}=D(O_{2,in}-O_2)+k_La(O_{2,sat}-O_2)-q_{O_2}(j_R^G+j_R^{\mathrm{EtOH}})V \)</p>
           </div>
-          <p class="note">For a batch culture set \(D=0\). The default uses glucose repression rather than symmetric competition: ethanol is produced while glucose is abundant, then consumed when glucose falls and oxygen is available.</p>
+          <p class="note">For a batch culture set \(D=0\). The regulatory states satisfy \(0\leq\phi_E\leq1\) and \(\rho_{R,0}\leq\rho_R\leq1\). Their finite induction times prevent ethanol uptake from switching on instantaneously when glucose is depleted.</p>
         </div>
         <div class="eq">
           <h3>Ohm's-law pathway returns</h3>
           <div class="math-block">
             <p class="equation-line">\( f_G \equiv j_{E,C} \)</p>
             <p class="equation-line">\( \Pi_F=\frac{Y_{ATP,F}}{1/f_G+r_F} \)</p>
-            <p class="equation-line">\( \Pi_R=\frac{Y_{ATP,R}}{1/f_G+r_{TCA}+r_{ETC}+1/f_{O_2}} \)</p>
+            <p class="equation-line">\( \Pi_R=\frac{Y_{ATP,R}}{1/f_G+r_{TCA}/\rho_R+r_{ETC}/\rho_R+1/f_{O_2}} \)</p>
           </div>
         </div>
         <div class="eq">
@@ -526,7 +536,7 @@
         </article>
         <article class="reason">
           <strong>Ethanol as second substrate</strong>
-          <p>\(j_{A,\mathrm{EtOH}}\) is oxygen dependent and multiplied by \(I_G(G)\), so ethanol uptake is repressed while glucose is abundant and rises after glucose depletion.</p>
+          <p>\(j_{A,\mathrm{EtOH}}\) is oxygen dependent and multiplied by the induced states \(\phi_E\rho_R\), so ethanol uptake remains low during glucose growth and during the diauxic lag.</p>
         </article>
         <article class="reason">
           <strong>Finite regulation</strong>
@@ -543,18 +553,49 @@
       </div>
     </section>
 
-    <section class="bands" aria-label="Model regimes">
+    <section class="panel rationale" aria-labelledby="diauxic-title">
+      <h2 id="diauxic-title">Diauxic Extension: Regulatory Memory</h2>
+      <p>
+        An instantaneous repression factor can switch substrates but cannot create a genuine lag.
+        The states \(\phi_E\) and \(\rho_R\) retain memory of the glucose-rich phase and represent,
+        respectively, the ethanol-use program and usable respiratory proteome capacity.
+      </p>
+      <div class="rationale-grid">
+        <article class="reason">
+          <strong>Glucose phase</strong>
+          <p>High \(G\) makes \(I_G\approx0\), keeping \(\phi_E\) low and \(\rho_R\) near its basal value \(\rho_{R,0}\). Fermentation produces ethanol.</p>
+        </article>
+        <article class="reason">
+          <strong>Diauxic lag</strong>
+          <p>After glucose depletion, \(I_G\) rises immediately but \(\phi_E\) and \(\rho_R\) rise over \(\tau_E\) and \(\tau_R\). Carbon and ATP supply can briefly fall to maintenance.</p>
+        </article>
+        <article class="reason">
+          <strong>Ethanol phase</strong>
+          <p>Once the induced states are large enough, aerobic ethanol uptake supports a second, usually slower, positive-growth phase.</p>
+        </article>
+        <article class="reason">
+          <strong>Identifiability</strong>
+          <p>Start by estimating \(\phi_E\) with \(\rho_R=1\). Add dynamic \(\rho_R\) only when oxygen-uptake, respiratory-capacity, or expression data can distinguish the two lags.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="bands" aria-label="Diauxic batch phases">
       <article class="band">
-        <strong>Low glucose, high O2</strong>
-        <p>Glucose-derived respiration dominates if glucose remains low. Ethanol can also be consumed as a respiratory substrate.</p>
+        <strong>1. Glucose growth</strong>
+        <p>Glucose uptake is high, reserve accumulates, overflow fermentation is active, and ethanol rises.</p>
       </article>
       <article class="band">
-        <strong>High glucose, O2 present</strong>
-        <p>Fermentation increases because the short pathway can deliver ATP faster per limiting pathway capacity.</p>
+        <strong>2. Glucose exhaustion</strong>
+        <p>Glucose uptake collapses and reserve mobilization briefly buffers the loss of the primary substrate.</p>
       </article>
       <article class="band">
-        <strong>Glucose depletion</strong>
-        <p>The splitter relaxes back toward respiration, glucose repression weakens, and ethanol uptake can drive a diauxic respiratory phase if oxygen remains.</p>
+        <strong>3. Diauxic lag</strong>
+        <p>Reserve declines while ethanol-use and respiratory capacity are induced; net growth approaches zero or becomes negative.</p>
+      </article>
+      <article class="band">
+        <strong>4. Ethanol growth</strong>
+        <p>Ethanol falls, oxygen demand rises, and living structural biomass resumes slower respiratory growth.</p>
       </article>
     </section>
 
@@ -563,8 +604,51 @@
       <ul>
         <li>The algebraic splitter gives the Crabtree threshold.</li>
         <li>The dynamic splitter adds finite regulatory time for proteome rewiring, mitochondrial capacity, redox handling, and enzyme expression.</li>
+        <li>The separate ethanol-use state is essential for a resolvable diauxic lag; the splitter alone only reallocates glucose-derived reserve flux.</li>
         <li>Use the dynamic form for glucose pulses, diauxic shifts, hysteresis, and single-cell or microfluidic trajectories.</li>
       </ul>
+    </section>
+
+    <section class="panel" aria-labelledby="evaluation-title">
+      <h2 id="evaluation-title">Batch Signatures For Evaluation</h2>
+      <div class="table-wrap">
+        <table class="symbol-table">
+          <thead>
+            <tr>
+              <th scope="col">Observed signature</th>
+              <th scope="col">Model comparison</th>
+              <th scope="col">Most informative parameters</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Two growth slopes</td>
+              <td>Specific growth rates before glucose exhaustion and during ethanol consumption.</td>
+              <td>Pathway yields, \(j_{G,\max}\), and \(j_{\mathrm{EtOH},\max}\).</td>
+            </tr>
+            <tr>
+              <td>Lag duration</td>
+              <td>Time from glucose exhaustion to sustained positive growth or ethanol uptake.</td>
+              <td>\(\tau_E\), and \(\tau_R\) when respiratory-capacity data are available.</td>
+            </tr>
+            <tr>
+              <td>Ethanol rise and fall</td>
+              <td>Peak concentration, production yield, onset of consumption, and depletion time.</td>
+              <td>\(y_{\mathrm{EtOH}}\), \(K_{G,E}\), \(n\), and ethanol-uptake kinetics.</td>
+            </tr>
+            <tr>
+              <td>Oxygen response</td>
+              <td>Dissolved-oxygen or oxygen-uptake trajectory across the shift.</td>
+              <td>\(k_La\), \(q_{O_2}\), \(\rho_R\), and oxygen half-saturations.</td>
+            </tr>
+            <tr>
+              <td>Biomass plateau or dip</td>
+              <td>Living structural biomass and total biomass proxy \(V(1+x_C)\) during the lag.</td>
+              <td>Reserve turnover, maintenance \(m_V\), and mortality behavior.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </section>
 
     <section class="panel" aria-labelledby="symbols-title">
@@ -611,8 +695,18 @@
             </tr>
             <tr>
               <td>\(I_G, K_{G,E}, n\)</td>
-              <td>Glucose repression factor, repression scale, and Hill sharpness.</td>
-              <td>Suppress ethanol uptake while glucose remains high.</td>
+              <td>Glucose de-repression signal, repression scale, and Hill sharpness.</td>
+              <td>Set the target induction state after glucose falls.</td>
+            </tr>
+            <tr>
+              <td>\(\phi_E, \phi_E^\ast, \tau_E\)</td>
+              <td>Actual and target ethanol-use program, and its induction timescale.</td>
+              <td>Create delayed ethanol uptake and the central diauxic lag.</td>
+            </tr>
+            <tr>
+              <td>\(\rho_R, \rho_R^\ast, \rho_{R,0}, \tau_R\)</td>
+              <td>Actual and target respiratory capacity, basal capacity, and adaptation timescale.</td>
+              <td>Represent glucose-repressed respiratory machinery and its slower recovery.</td>
             </tr>
             <tr>
               <td>\(x_C, j_{E,C}\)</td>
@@ -680,9 +774,14 @@
               <td>Connect catabolic pathway use to growth potential.</td>
             </tr>
             <tr>
-              <td>\(y_{\mathrm{EtOH}}, \lambda_{\mathrm{EtOH}}\)</td>
-              <td>Ethanol yield from fermentation and ethanol loss rate.</td>
-              <td>Track ethanol as both the measurable Crabtree product and a later substrate.</td>
+              <td>\(y_{\mathrm{EtOH}}\)</td>
+              <td>Ethanol yield from fermentation.</td>
+              <td>Converts fermentation flux into the measurable ethanol-production rate.</td>
+            </tr>
+            <tr>
+              <td>\(\lambda_{\mathrm{EtOH}}\)</td>
+              <td>First-order non-biological ethanol loss-rate constant, with units of inverse time.</td>
+              <td>Represents evaporation, gas stripping, or abiotic degradation through \(-\lambda_{\mathrm{EtOH}}\mathrm{EtOH}\); set it to zero when these losses are negligible.</td>
             </tr>
             <tr>
               <td>\(Y_{X,G}, Y_{X,\mathrm{EtOH}}\)</td>
