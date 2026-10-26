@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coupled Thermal-Biochemical Microfluidic System</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+<style>
+  :root {
+    --blue: #1e5a8a;
+    --blue-light: #eaf3fa;
+    --red: #b23a2e;
+    --red-light: #fbeeec;
+    --green: #2e7d4f;
+    --green-light: #edf7f1;
+    --ink: #222;
+    --muted: #666;
+    --border: #d8dde3;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    color: var(--ink);
+    margin: 0;
+    background: #f5f6f8;
+    line-height: 1.6;
+  }
+  .page {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 32px 24px 80px;
+  }
+  header.hero {
+    background: linear-gradient(135deg, #16324f 0%, #1e5a8a 60%, #2e7d4f 100%);
+    color: #fff;
+    border-radius: 12px;
+    padding: 36px 40px;
+    margin-bottom: 28px;
+  }
+  header.hero h1 { margin: 0 0 8px; font-size: 1.7rem; }
+  header.hero p { margin: 0; color: #d7e5f0; max-width: 60rem; }
+  .figure-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 28px;
+  }
+  .figure-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+  }
+  .figure-card figcaption {
+    color: var(--muted);
+    font-size: 0.92rem;
+    margin-top: 10px;
+  }
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin-bottom: 28px;
+  }
+  @media (max-width: 800px) { .grid-2 { grid-template-columns: 1fr; } }
+  .card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px 24px;
+  }
+  .card h2 {
+    margin: 0 0 12px;
+    font-size: 1.15rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .card h3 { margin: 18px 0 8px; font-size: 1.02rem; }
+  .chip { color: var(--blue); }
+  .tube { color: var(--green); }
+  .heat { color: var(--red); }
+  .eq {
+    background: #f7f9fb;
+    border-left: 3px solid var(--blue);
+    padding: 8px 14px;
+    margin: 10px 0;
+    overflow-x: auto;
+  }
+  .eq.red { border-left-color: var(--red); }
+  .eq.green { border-left-color: var(--green); }
+  table.bc {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    margin-top: 8px;
+  }
+  table.bc th, table.bc td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  table.bc th { background: #f0f3f6; }
+  .loop {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+    margin: 12px 0;
+  }
+  .loop .step {
+    background: var(--blue-light);
+    color: var(--blue);
+    border: 1px solid #bcd4e6;
+    border-radius: 20px;
+    padding: 4px 14px;
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+  .loop .arrow { color: var(--muted); font-weight: bold; }
+  .loop .step.red { background: var(--red-light); color: var(--red); border-color: #e5b8b2; }
+  .note {
+    background: #fff8e6;
+    border: 1px solid #eedc9a;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 0.95rem;
+  }
+  ul.compact { margin: 8px 0; padding-left: 20px; }
+  ul.compact li { margin: 4px 0; }
+  .legend {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+    font-size: 0.9rem;
+    margin-top: 8px;
+    color: var(--muted);
+  }
+  .legend span::before {
+    content: "";
+    display: inline-block;
+    width: 12px; height: 12px;
+    border-radius: 3px;
+    margin-right: 6px;
+    vertical-align: -1px;
+  }
+  .legend .c1::before { background: linear-gradient(90deg, #4a90d9, #e2604a); }
+  section.section-title {
+    margin: 34px 0 14px;
+    font-size: 1.35rem;
+    border-bottom: 2px solid var(--border);
+    padding-bottom: 6px;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+<header class="hero">
+  <h1>Coupled Thermal-Biochemical Microfluidic System</h1>
+  <p>
+    A 2D microfluidic growth chip coupled to an external 1D substrate supply tube:
+    substrate mass transport, Monod bacterial growth kinetics, microbial heat generation,
+    and full temperature evolution — all interacting through a shared open interface.
+  </p>
+</header>
+
+<!-- ====================================================== -->
+<!-- FIGURE                                                 -->
+<!-- ====================================================== -->
+<figure class="figure-card">
+  <img src="microfluidic.png" alt="Schematic of the coupled 1D supply tube and 2D microfluidic chip">
+  <figcaption>
+    <strong>Figure 1.</strong> System schematic. The 1D supply tube (bottom) delivers substrate
+    and thermal control along the open interface at \(y=0\). The 2D chip (top) hosts
+    substrate diffusion (blue→red field, \(C(x,y,t)\)), bacterial biomass \(X\) (green rods),
+    and exothermic hot-spots around active colonies (\(T_{\text{chip}}\)). Upward arrows mark
+    the substrate flux \(J_C\) and heat flux \(J_Q\) exchanged across the open interface \(\Gamma_{\text{int}}\).
+  </figcaption>
+  <div class="legend">
+    <span class="c1">Color field: substrate C (blue = rich) / temperature T (red = hot)</span>
+  </div>
+</figure>
+
+<!-- ====================================================== -->
+<!-- DOMAINS                                                -->
+<!-- ====================================================== -->
+<h2 class="section-title">1. System Domains &amp; Geometry</h2>
+<div class="grid-2">
+
+  <div class="card">
+    <h2 class="chip">2D Microfluidic Chip — \(\Omega_{\text{chip}}\)</h2>
+    <p>
+      Rectangular growth chamber over \((x,y)\in[0,L_x]\times[0,L_y]\).
+      Fluid is stagnant or slow, so substrate transport is <em>diffusion-dominated</em>,
+      and bacterial biomass expands locally (green colonies in the figure).
+      Metabolic activity of dense colonies creates localized heat sources (red halos).
+    </p>
+  </div>
+
+  <div class="card">
+    <h2 class="tube">1D Supply Tube — \(\Omega_{\text{tube}}\)</h2>
+    <p>
+      Narrow, high-aspect-ratio channel of height \(H_{\text{tube}}\) lying along the
+      open boundary \(y=0\), spanning \(x\in[0,L_x]\). A controlled uniform velocity \(u_0\)
+      advects substrate and heat from the inlet \((x=0,\; C=C_{\text{in}},\; T=T_{\text{in}})\)
+      to the outlet \((x=L_x)\).
+    </p>
+  </div>
+
+</div>
+
+<div class="card" style="margin-bottom:28px;">
+  <h2>Open Coupling Interface — \(\Gamma_{\text{int}}\) at \(y=0\)</h2>
+  <p>
+    The dashed line in the figure: the only open boundary of the chip. It permits continuous
+    lateral exchange of substrate mass and thermal energy with the tube, enforced through
+    simultaneous Dirichlet (value) continuity and Neumann (flux) balance — see §3.
+  </p>
+</div>
+
+<!-- ====================================================== -->
+<!-- EQUATIONS                                              -->
+<!-- ====================================================== -->
+<h2 class="section-title">2. Governing Coupled Equations</h2>
+
+<div class="grid-2">
+
+  <div class="card">
+    <h2 class="chip">A. Substrate Transport (\(C\))</h2>
+
+    <h3>In the 2D chip: diffusion + metabolic consumption</h3>
+    <div class="eq">
+      \[
+      \frac{\partial C_{\text{chip}}}{\partial t}
+      = D_C \nabla^2 C_{\text{chip}}
+      - \underbrace{\frac{\mu(C_{\text{chip}})}{Y_{X/C}}\,X}_{R_C\ \text{(consumption)}}
+      \]
+    </div>
+
+    <h3>Along the 1D tube: advection + leakage into chip</h3>
+    <div class="eq">
+      \[
+      \frac{\partial C_{\text{tube}}}{\partial t}
+      + u_0\frac{\partial C_{\text{tube}}}{\partial x}
+      = D_C \frac{\partial^2 C_{\text{tube}}}{\partial x^2}
+      - \frac{J_C(x,t)}{H_{\text{tube}}}
+      \]
+    </div>
+    <p style="font-size:0.93rem; color:var(--muted);">
+      where \(J_C(x,t) = -D_C\,\left.\dfrac{\partial C_{\text{chip}}}{\partial y}\right|_{y=0}\)
+      is the diffusive substrate flux leaving the tube and entering the chip
+      (the first set of upward arrows in the figure).
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>B. Bacterial Biomass Dynamics (\(X\))</h2>
+    <p>
+      Biomass grows on substrate via Monod kinetics, scaled by a thermal function
+      (Cardinal Temperature Model / Ratkowsky), spreads by random motility, and decays:
+    </p>
+    <div class="eq">
+      \[
+      \frac{\partial X}{\partial t}
+      = D_X \nabla^2 X + \mu(C_{\text{chip}},T_{\text{chip}})\,X - \delta X
+      \]
+    </div>
+    <div class="eq">
+      \[
+      \mu(C,T) = \mu_{\max}(T)\cdot\frac{C}{K_s + C}
+      \]
+    </div>
+    <p style="font-size:0.93rem; color:var(--muted);">
+      This equation lives only in the chip — the tube is sterile. Note the hidden feedback:
+      \(T\) enters \(\mu\), so heat generated by growth feeds back on growth itself (§4).
+    </p>
+  </div>
+
+</div>
+
+<div class="card" style="margin-bottom:28px;">
+  <h2 class="heat">C. Heat Transport &amp; Microbial Heat Release (\(T\))</h2>
+  <p>
+    Respiration and metabolic carbon conversion are exothermic. The volumetric heat source is
+    proportional to substrate consumption:
+  </p>
+  <div class="eq red">
+    \[
+    Q_{\text{bio}}(x,y,t) = Y_{Q/C}\cdot R_C(C,X)
+    = Y_{Q/C}\cdot\frac{\mu(C,T)}{Y_{X/C}}\,X
+    \]
+  </div>
+  <p style="font-size:0.93rem; color:var(--muted); margin-top:-4px;">
+    \(Y_{Q/C}\): metabolic heat yield per unit mass of substrate consumed (J/g).
+  </p>
+
+  <div class="grid-2" style="margin:0;">
+    <div>
+      <h3 class="chip">Chip — conduction + internal generation</h3>
+      <div class="eq red">
+        \[
+        \rho_{\text{chip}} c_{p,\text{chip}}\frac{\partial T_{\text{chip}}}{\partial t}
+        = k_{\text{chip}}\nabla^2 T_{\text{chip}} + Q_{\text{bio}}(x,y,t)
+        \]
+      </div>
+      <p style="font-size:0.93rem; color:var(--muted);">
+        Heat spreads by conduction through the fluid/biomass matrix and is generated
+        wherever colonies are active (red halos in the figure).
+      </p>
+    </div>
+    <div>
+      <h3 class="tube">Tube — advection + interfacial exchange</h3>
+      <div class="eq green">
+        \[
+        \rho_{\text{tube}} c_{p,\text{tube}}
+        \left(\frac{\partial T_{\text{tube}}}{\partial t}
+        + u_0\frac{\partial T_{\text{tube}}}{\partial x}\right)
+        = k_{\text{tube}}\frac{\partial^2 T_{\text{tube}}}{\partial x^2}
+        - \frac{J_Q(x,t)}{H_{\text{tube}}}
+        \]
+      </div>
+      <p style="font-size:0.93rem; color:var(--muted);">
+        where \(J_Q(x,t) = -k_{\text{chip}}\left.\dfrac{\partial T_{\text{chip}}}{\partial y}\right|_{y=0}\)
+        is the conductive heat flux exchanged across the interface (second set of arrows).
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- ====================================================== -->
+<!-- BOUNDARY CONDITIONS                                    -->
+<!-- ====================================================== -->
+<h2 class="section-title">3. Boundary Conditions &amp; Inter-Domain Coupling</h2>
+<div class="card" style="margin-bottom:28px;">
+  <table class="bc">
+    <tr>
+      <th style="width:28%;">Location</th>
+      <th>Condition</th>
+    </tr>
+    <tr>
+      <td><strong>Tube inlet</strong> \(x=0\)</td>
+      <td>Dirichlet: \(C_{\text{tube}}(0,t)=C_{\text{in}}\),&nbsp; \(T_{\text{tube}}(0,t)=T_{\text{in}}\)</td>
+    </tr>
+    <tr>
+      <td><strong>Tube outlet</strong> \(x=L_x\)</td>
+      <td>Zero-gradient outflow: \(\partial C_{\text{tube}}/\partial x = 0\),&nbsp; \(\partial T_{\text{tube}}/\partial x = 0\)</td>
+    </tr>
+    <tr>
+      <td><strong>Open interface</strong> \(\Gamma_{\text{int}}\) at \(y=0\)</td>
+      <td>
+        <em>Dirichlet continuity</em> (matching values):
+        \(C_{\text{chip}}(x,0,t)=C_{\text{tube}}(x,t)\),&nbsp;
+        \(T_{\text{chip}}(x,0,t)=T_{\text{tube}}(x,t)\).<br>
+        <em>Neumann flux balance</em> (conservation): the fluxes \(J_C\), \(J_Q\) leaving the 1D tube
+        enter the 2D chip boundary unchanged.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Closed chip walls</strong><br>\(x=0,\ x=L_x,\ y=L_y\)</td>
+      <td>
+        Substrate &amp; biomass — no-flux: \(\mathbf{n}\cdot\nabla C = 0\),&nbsp; \(\mathbf{n}\cdot\nabla X = 0\).<br>
+        Temperature — adiabatic \((\mathbf{n}\cdot\nabla T = 0)\) <em>or</em> convective loss to ambient:
+        \(-k_{\text{chip}}(\mathbf{n}\cdot\nabla T_{\text{chip}}) = h_{\text{amb}}(T_{\text{chip}} - T_{\text{ambient}})\)
+        (top bar in the figure).
+      </td>
+    </tr>
+  </table>
+</div>
+
+<!-- ====================================================== -->
+<!-- REGIMES & FEEDBACK                                     -->
+<!-- ====================================================== -->
+<h2 class="section-title">4. Key Physical Regimes &amp; Coupling Loops</h2>
+<div class="grid-2">
+
+  <div class="card">
+    <h2>Bi-directional Thermal-Biochemical Feedback</h2>
+    <p>
+      The central nonlinear loop of the system — growth makes heat, heat reshapes growth:
+    </p>
+    <div class="loop">
+      <span class="step">Substrate supply \(C\)</span><span class="arrow">→</span>
+      <span class="step">Metabolic growth \(\mu\)</span><span class="arrow">→</span>
+      <span class="step red">Heat generation \(Q_{\text{bio}}\)</span><span class="arrow">→</span>
+      <span class="step red">Temperature rise \(T\)</span><span class="arrow">→</span>
+      <span class="step">Altered growth rate \(\mu(T)\)</span>
+    </div>
+    <p style="font-size:0.93rem; color:var(--muted);">
+      In the figure this is visible at once: colonies sit inside red thermal halos, and the
+      blue (substrate-rich) region is depleted where biomass is dense — supply, consumption,
+      and heating are all spatially coupled through \(\Gamma_{\text{int}}\).
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>Thermal vs. Mass Péclet Numbers (\(\mathrm{Pe}_T\) vs. \(\mathrm{Pe}_C\))</h2>
+    <p>
+      Thermal diffusivity \(\alpha = k/(\rho c_p) \sim 10^{-7}\ \text{m}^2/\text{s}\)
+      is typically <strong>100–1000×</strong> larger than substrate diffusivity
+      \(D_C \sim 10^{-9}\ \text{m}^2/\text{s}\):
+    </p>
+    <ul class="compact">
+      <li><strong>Heat</strong> flattens across the chip much faster — temperature field is comparatively smooth.</li>
+      <li><strong>Substrate</strong> forms sharp depletion zones around colonies — steep gradients that drive strong interfacial flux \(J_C\).</li>
+    </ul>
+    <div class="note">
+      <strong>Numerical implication:</strong> the two fields live on very different scales,
+      so the model demands scale-aware time stepping / resolution: stiff, sharp \(C\) fronts
+      alongside rapidly relaxing \(T\) fields.
+    </div>
+  </div>
+
+</div>
+
+</div>
+</body>
+</html>

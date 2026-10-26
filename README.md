@@ -37,6 +37,38 @@ The model is intended to test qualitative batch-culture behavior: glucose drawdo
 
 ## Key Artifacts
 
+### Microfluidic simulator and optimal control
+
+`src/fluidic_opt/` couples a 1D supply tube to one or more 2D chips, with either
+continuum Monod biomass or individual agents. It is a nondimensional research
+prototype; the agent model does not yet include mDEB reserve and structure states.
+
+Dependencies: `torch`, `numpy`, `scipy`, and `matplotlib`. From the repository root:
+
+```sh
+PYTHONPATH=src python -m fluidic_opt.run --chips 1 --iters 80 --t-end 2.5 --dt 0.0012
+PYTHONPATH=src python -m fluidic_opt.run --ibm --chips 2 --iters 25 --t-end 2.5 --dt 0.0012
+PYTHONPATH=src python -m unittest discover -s tests -v
+```
+
+`--dt` is a maximum step size. The driver derives the number of steps and uses
+`dt = t_end / steps` to reach the horizon exactly. An explicit `--steps` must
+satisfy the requested maximum step size and the transport stability bound.
+Control costs integrate the controls actually applied at each Euler step.
+
+The cell-centered interface and tube inlet use half-cell Dirichlet distances.
+Substrate uptake is limited by post-transport availability, with the same accepted
+uptake driving biomass production and metabolic heat. Both backends penalize
+spatial temperature maxima above the shared threshold `0.10`; outputs retain
+mean temperatures, hotspot temperatures, actual sample times, and run metadata.
+IBM gradients apply within a fixed division/death event sequence; hard event
+timing is not differentiated. Validate optimized schedules across noise seeds.
+
+Results are written under `outputs/fluidic_control/cont_chipsN` or `ibm_chipsN`.
+Existing figures and archives predate these numerical corrections and have not
+been regenerated. See `references/fluidic_optimal_control_design.html` for design
+context; its historical optimization results use the earlier solver.
+
 ### Crabtree HTML model sketch
 
 Open:
